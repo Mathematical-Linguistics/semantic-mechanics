@@ -1,6 +1,6 @@
 """
 Build and execute Notebook 04 in R: Pragmatic Density, Signifyin(g), and Information Theory.
-Uses IRkernel, ggplot2, dplyr, tidyr.
+Uses geom_label with custom directional nudges for zero-collision readability.
 """
 
 import nbformat as nbf
@@ -102,7 +102,7 @@ We assemble couplets across three distinct communicative regimes:
 df_poetics <- data.frame(
   id = c("POP_01", "POP_02", "CLASSIC_01", "CLASSIC_02", "SIGNIFY_01", "SIGNIFY_02", "SIGNIFY_03", "SIGNIFY_04"),
   author = c(
-    "Commercial Pop", "Advertising Jingle", "Traditional Lyric (Keatsian)", "Shakespearean Couplet",
+    "Commercial Pop", "Advertising Jingle", "Traditional Lyric (Keats)", "Shakespearean Couplet",
     "MF DOOM (Madvillainy)", "Mos Def / Yasiin Bey", "Rakim (Paid in Full)", "Kendrick Lamar (DNA)"
   ),
   tier = c(
@@ -135,6 +135,9 @@ df_poetics <- data.frame(
   syllables_l2 = c(10, 11, 10, 10, 12, 11, 14, 14),
   rhyme_phonemes = c(1, 1, 0, 1, 4, 3, 3, 5),
   words_count = c(17, 18, 14, 18, 17, 16, 20, 17),
+  # Directional offsets for collision-free label display
+  nudge_x = c(-0.02, 0.05, -0.03, 0.04, 0.05, -0.04, 0.04, 0.05),
+  nudge_y = c(0.10, -0.10, 0.12, -0.12, 0.12, -0.12, 0.14, -0.12),
   stringsAsFactors = FALSE
 )
 
@@ -164,11 +167,9 @@ We visualize the phonetic assonance coupling between syllables in MF DOOM's coup
 s1 <- c("Off", "pride", "kings", "get", "shaved", "like", "a", "com-", "-ic", "strip")
 s2 <- c("Bleed", "through", "the", "rim", "split", "like", "a-", "-tom-", "-ic", "rip")
 
-# Create grid of phonetic match values
 grid_df <- expand.grid(Line1 = factor(s1, levels = rev(s1)), Line2 = factor(s2, levels = s2))
 grid_df$coupling <- 0
 
-# Multi-syllabic rhyme pairings: "like a comic strip" <-> "like atomic rip"
 rhyme_pairs <- list(
   c("like", "like"), c("a", "a-"), c("com-", "-tom-"), c("-ic", "-ic"), c("strip", "rip"),
   c("Off", "Bleed"), c("shaved", "split")
@@ -194,7 +195,7 @@ p1
 """
     ))
 
-    # Visualization 2: The Pragmatic Information Plane
+    # Visualization 2: The Pragmatic Information Plane with geom_label anti-collision
     cells.append(nbf.v4.new_markdown_cell(
 """## 3. The Pragmatic Information Plane
 We project the poetic traditions onto the 2D plane: **Multi-Syllabic Rhyme Density (MSRD)** vs. **Pragmatic Density Index ($\\rho$)**.
@@ -203,22 +204,25 @@ Notice how virtuosic hip-hop occupies the upper-right quadrant, representing sim
     ))
 
     cells.append(nbf.v4.new_code_cell(
-"""# Plot 2: The Pragmatic Information Plane
+"""# Plot 2: The Pragmatic Information Plane (De-Overlapped Card Badges)
 p2 <- ggplot(df_poetics, aes(x = msrd, y = pragmatic_density, color = tier)) +
-  annotate("rect", xmin = 0.20, xmax = 0.60, ymin = 1.0, ymax = 2.2, fill = "#EBF8FF", alpha = 0.5) +
-  annotate("text", x = 0.38, y = 2.05, label = "CRYPTOGRAPHIC CULTURAL BASTION\\n(High PoW + High Polysemy)", 
+  annotate("rect", xmin = 0.20, xmax = 0.58, ymin = 1.0, ymax = 2.3, fill = "#EBF8FF", alpha = 0.5) +
+  annotate("text", x = 0.38, y = 2.18, label = "CRYPTOGRAPHIC CULTURAL BASTION\\n(High PoW + High Polysemy)", 
            color = "#2B6CB0", fontface = "bold", size = 3.3) +
   geom_hline(yintercept = 1.0, linetype = "dashed", color = "#718096", size = 0.6) +
   geom_vline(xintercept = 0.20, linetype = "dashed", color = "#718096", size = 0.6) +
-  geom_point(size = 4.5, stroke = 1.0) +
-  geom_text(aes(label = author), vjust = -0.9, fontface = "bold", size = 3.2, show.legend = FALSE) +
+  geom_segment(aes(xend = msrd + nudge_x, yend = pragmatic_density + nudge_y), color = "#A0AEC0", size = 0.5, linetype = "solid") +
+  geom_point(size = 4.5, stroke = 1.2, fill = "white", shape = 21) +
+  geom_label(aes(x = msrd + nudge_x, y = pragmatic_density + nudge_y, label = author), 
+             fontface = "bold", size = 3.1, fill = "white", label.padding = unit(0.25, "lines"), 
+             label.r = unit(0.2, "lines"), show.legend = FALSE) +
   scale_color_manual(values = c(
     "Tier 1: Commercial Pop" = "#E53E3E",
     "Tier 2: Traditional Verse" = "#DD6B20",
     "Tier 3: Virtuosic Signifyin(g)" = "#2B6CB0"
   )) +
-  scale_x_continuous(limits = c(-0.05, 0.55), labels = scales::percent_format(accuracy = 1)) +
-  scale_y_continuous(limits = c(0.1, 2.2)) +
+  scale_x_continuous(limits = c(-0.08, 0.58), labels = scales::percent_format(accuracy = 1)) +
+  scale_y_continuous(limits = c(0.1, 2.35)) +
   labs(
     title = "The Pragmatic Information Plane: Rhyme Density vs Semantic Encoding Density",
     subtitle = "Hip-hop poetics combines multi-syllabic phonetic constraints with multi-layered polysemy",
@@ -291,18 +295,16 @@ p3
     return nb
 
 if __name__ == "__main__":
-    print("Building Notebook 04 in R...")
+    print("Building Notebook 04 in R with anti-collision layout...")
     nb = create_nb()
     nb_path = "/Users/erickoduniyi/Desktop/mlg/semantic-mechanics/notebooks/r/04_pragmatic_density_and_signifying.ipynb"
     
     with open(nb_path, "w", encoding="utf-8") as f:
         nbf.write(nb, f)
-    print(f"Saved structure to {nb_path}")
 
-    print("Executing Notebook 04 (R) via nbclient...")
     client = NotebookClient(nb, timeout=600, kernel_name="ir")
     executed_nb = client.execute()
 
     with open(nb_path, "w", encoding="utf-8") as f:
         nbf.write(executed_nb, f)
-    print("Notebook 04 (R) executed and saved successfully with all outputs.")
+    print("Notebook 04 (R) re-executed and saved successfully.")

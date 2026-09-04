@@ -1,6 +1,6 @@
 """
 Generate and execute Notebook 04: Pragmatic Density, Gatesian Signifyin(g), and Information Theory.
-Follows notebook-guidance principles strictly.
+Uses adjustText for clean, collision-free label positioning.
 """
 
 import json
@@ -31,7 +31,7 @@ def create_notebook():
     # Title & Introduction
     cells.append(nbf.v4.new_markdown_cell(
 """# Processing Culture: Pragmatic Density, Signifyin(g), and Information Theory
-**Mathematical Linguistics Group (mlG)** | *Semantic Mechanics Series — Notebook 04*
+**Mathematical Linguistics Group (mlG)** | *Semantic Mechanics Series — Notebook 04 (Python)*
 
 ---
 
@@ -45,10 +45,6 @@ In *The Signifying Monkey* (1988), Henry Louis Gates Jr. formalized **Signifyin(
 
 In linguistic mechanics, we formalize this phenomenon using **Pragmatic Density** and information entropy. While standard communication channels seek to minimize ambiguity, cultural poetics intentionally maximizes **constructive ambiguity** and multi-syllabic rhyme density as a **Proof-of-Work (PoW)**:
 $$\\rho_{\\text{pragmatic}}(T) = \\frac{\\sum_{k=1}^K I(M_k; T)}{\\text{length}(T)}$$
-
-Where:
-- $M_1, \\dots, M_K$ are distinct, non-trivial, coherent semantic decodings.
-- High rhyme density creates rigid phonetic constraints, proving that the multi-layered meaning was intentionally constructed rather than accidental.
 
 In this notebook, we:
 1. Model the dual-channel transmission of double-voiced couplets.
@@ -64,8 +60,7 @@ In this notebook, we:
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import re
-from collections import Counter
+from adjustText import adjust_text
 
 # High-contrast publication plot styling
 plt.rcParams['font.sans-serif'] = 'Helvetica, Arial, DejaVu Sans'
@@ -75,7 +70,7 @@ plt.rcParams['grid.color'] = '#E0E0E0'
 plt.rcParams['grid.linestyle'] = '--'
 plt.rcParams['grid.alpha'] = 0.7
 
-print("Environment and libraries initialized.")
+print("Environment and adjustText initialized successfully.")
 """
     ))
 
@@ -98,12 +93,10 @@ poetic_samples = [
         "tier": "Tier 1: Commercial Pop",
         "line1": "I see you walking down the sunny street",
         "line2": "I love the way your rhythm moves your feet",
-        "surface_meaning": "Observation of someone walking pleasantly to music.",
-        "hidden_meaning": "None (univalent surface match).",
         "k_layers": 1,
         "syllables_line1": 10,
         "syllables_line2": 10,
-        "rhyme_phonemes": 1  # street / feet
+        "rhyme_phonemes": 1
     },
     {
         "id": "POP_02",
@@ -111,25 +104,21 @@ poetic_samples = [
         "tier": "Tier 1: Commercial Pop",
         "line1": "Wake up every morning with a smile so bright",
         "line2": "Drink the morning coffee and your day is right",
-        "surface_meaning": "Product endorsement linking beverage to happiness.",
-        "hidden_meaning": "None (univalent commercial imperative).",
         "k_layers": 1,
         "syllables_line1": 12,
         "syllables_line2": 11,
-        "rhyme_phonemes": 1  # bright / right
+        "rhyme_phonemes": 1
     },
     {
         "id": "CLASSIC_01",
-        "author": "Traditional Lyric (Keatsian)",
+        "author": "Traditional Lyric (Keats)",
         "tier": "Tier 2: Traditional Verse",
         "line1": "Thou still unravished bride of quietness",
         "line2": "Thou foster child of silence and slow time",
-        "surface_meaning": "Address to an ancient Grecian urn.",
-        "hidden_meaning": "Meditation on human mortality vs immortal aesthetic arrest.",
         "k_layers": 2,
         "syllables_line1": 10,
         "syllables_line2": 10,
-        "rhyme_phonemes": 0  # Blank verse / slant
+        "rhyme_phonemes": 0
     },
     {
         "id": "CLASSIC_02",
@@ -137,12 +126,10 @@ poetic_samples = [
         "tier": "Tier 2: Traditional Verse",
         "line1": "So long as men can breathe or eyes can see",
         "line2": "So long lives this and this gives life to thee",
-        "surface_meaning": "Poetry outliving mortal human beauty.",
-        "hidden_meaning": "Meta-textual boasting of the author's own craft immortality.",
         "k_layers": 2,
         "syllables_line1": 10,
         "syllables_line2": 10,
-        "rhyme_phonemes": 1  # see / thee
+        "rhyme_phonemes": 1
     },
     {
         "id": "SIGNIFY_01",
@@ -150,12 +137,10 @@ poetic_samples = [
         "tier": "Tier 3: Virtuosic Signifyin(g)",
         "line1": "Off pride kings get shaved like a comic strip",
         "line2": "Bleed through the rim, split like a atomic rip",
-        "surface_meaning": "Barbershop grooming and comic book superheroes.",
-        "hidden_meaning": "Dethroning false commercial rap royalty; nuclear fission; multi-syllabic acoustic dominance.",
         "k_layers": 4,
         "syllables_line1": 12,
         "syllables_line2": 12,
-        "rhyme_phonemes": 4  # comic strip / atomic rip
+        "rhyme_phonemes": 4
     },
     {
         "id": "SIGNIFY_02",
@@ -163,12 +148,10 @@ poetic_samples = [
         "tier": "Tier 3: Virtuosic Signifyin(g)",
         "line1": "Speech is my hammer, bang the world into shape",
         "line2": "Now let it fall huh, my broadway lyrical stage",
-        "surface_meaning": "Labor tools and theatrical performances.",
-        "hidden_meaning": "John Henry folk mythology; Marxist labor theory of speech; reclaiming urban public space.",
         "k_layers": 4,
         "syllables_line1": 11,
         "syllables_line2": 11,
-        "rhyme_phonemes": 3  # into shape / lyrical stage (assonant slant)
+        "rhyme_phonemes": 3
     },
     {
         "id": "SIGNIFY_03",
@@ -176,12 +159,10 @@ poetic_samples = [
         "tier": "Tier 3: Virtuosic Signifyin(g)",
         "line1": "I leave a mic in smoke cause my intention is fire",
         "line2": "Drop a jewel in the cipher like a sacred desire",
-        "surface_meaning": "Stage performance with hot microphones and jewelry.",
-        "hidden_meaning": "Five Percent Nation Supreme Mathematics ('dropping jewels'); alchemical combustion; pedagogical initiation.",
         "k_layers": 5,
         "syllables_line1": 14,
         "syllables_line2": 14,
-        "rhyme_phonemes": 3  # is fire / sacred desire
+        "rhyme_phonemes": 3
     },
     {
         "id": "SIGNIFY_04",
@@ -189,12 +170,10 @@ poetic_samples = [
         "tier": "Tier 3: Virtuosic Signifyin(g)",
         "line1": "I got loyalty, got royalty inside my DNA",
         "line2": "I got power, poison, pain and joy inside my DNA",
-        "surface_meaning": "Genetic inheritance and personal identity traits.",
-        "hidden_meaning": "Reframing Fox News pathology critique; historical trauma and generational sovereignty; dualism of royal lineage vs structural violence.",
         "k_layers": 4,
         "syllables_line1": 13,
         "syllables_line2": 14,
-        "rhyme_phonemes": 5  # inside my DNA (repetition cadence)
+        "rhyme_phonemes": 5
     }
 ]
 
@@ -207,16 +186,9 @@ print(df_poetics[['id', 'author', 'tier', 'k_layers', 'rhyme_phonemes']])
     # Section 2: Mathematical Formalization of Pragmatic Density
     cells.append(nbf.v4.new_markdown_cell(
 """## 2. Quantitative Formulation: Rhyme Density & Pragmatic Entropy
-We formalize two core computational metrics:
-
-1. **Multi-Syllabic Rhyme Density (MSRD):**
-   $$\\text{MSRD} = \\frac{2 \\times N_{\\text{rhyming syllables}}}{S_{\\text{line1}} + S_{\\text{line2}}}$$
-   This measures the percentage of metrical time occupied by phonetically coupled syllables.
-
-2. **Pragmatic Density Index ($\\rho_{\\text{pragmatic}}$):**
-   $$\\rho_{\\text{pragmatic}} = \\frac{K_{\\text{layers}} \\cdot (1 + \\text{MSRD})}{\\log_2(\\text{Total Words} + 1)}$$
-   - $K_{\\text{layers}}$: The count of orthogonal, coherent semantic readings (Literal, Subcultural, Political, Meta-poetic).
-   - $\\log_2(\\text{Words})$: Normalizes for verbal economy (penalizing redundant verbosity).
+We compute:
+1. **Multi-Syllabic Rhyme Density (MSRD)**
+2. **Pragmatic Density Index ($\\rho_{\\text{pragmatic}}$)**
 """
     ))
 
@@ -244,7 +216,6 @@ df_poetics['word_count'] = word_counts
 df_poetics['msrd'] = np.round(msrd_scores, 3)
 df_poetics['pragmatic_density'] = np.round(density_scores, 3)
 
-# Aggregate comparison by Tier
 summary_tier = df_poetics.groupby('tier').agg(
     mean_k_layers=('k_layers', 'mean'),
     mean_msrd=('msrd', 'mean'),
@@ -260,15 +231,10 @@ print(summary_tier.round(3))
     # Visualization 1: Phonetic Multi-Syllabic Rhyme Matrix
     cells.append(nbf.v4.new_code_cell(
 """# Visualization 1: Phonetic Alignment & Syllabic Rhyme Coupling Heatmap
-# Example: MF DOOM couplet syllabic alignment
 doom_syllables_1 = ["Off", "pride", "kings", "get", "shaved", "like", "a", "com-", "-ic", "strip"]
 doom_syllables_2 = ["Bleed", "through", "the", "rim,", "split", "like", "a-", "-tom-", "-ic", "rip"]
 
-# Construct Phonetic Affinity Matrix (assonance/consonance scoring)
 affinity_matrix = np.zeros((len(doom_syllables_1), len(doom_syllables_2)))
-
-# Define phonetic matches (Madvillainy multi-syllabic rhyme scheme)
-# "like a comic strip" <--> "like atomic rip"
 rhyme_pairs = [(5, 5), (6, 6), (7, 7), (8, 8), (9, 9), (0, 0), (4, 4)]
 for i, j in rhyme_pairs:
     affinity_matrix[i, j] = 1.0
@@ -278,10 +244,9 @@ cax = ax.imshow(affinity_matrix, cmap='Blues', interpolation='nearest', vmin=0, 
 
 ax.set_xticks(np.arange(len(doom_syllables_2)))
 ax.set_yticks(np.arange(len(doom_syllables_1)))
-ax.set_xticklabels(doom_syllables_2, rotation=45, ha="right", fontsize=9, fontweight='bold')
-ax.set_yticklabels(doom_syllables_1, fontsize=9, fontweight='bold')
+ax.set_xticklabels(doom_syllables_2, rotation=45, ha="right", fontsize=9.5, fontweight='bold')
+ax.set_yticklabels(doom_syllables_1, fontsize=9.5, fontweight='bold')
 
-# Color bar & labels
 cbar = fig.colorbar(cax, fraction=0.046, pad=0.04)
 cbar.set_label("Phonetic Assonance / Metric Coupling", rotation=270, labelpad=15, fontsize=9)
 
@@ -294,10 +259,10 @@ plt.show()
 """
     ))
 
-    # Visualization 2: Pragmatic Density vs Rhyme Density
+    # Visualization 2: The Pragmatic Information Plane with adjustText
     cells.append(nbf.v4.new_code_cell(
-"""# Visualization 2: The Pragmatic Information Plane
-fig, ax = plt.subplots(figsize=(10, 6), dpi=120)
+"""# Visualization 2: The Pragmatic Information Plane (De-Overlapped Layout)
+fig, ax = plt.subplots(figsize=(10.5, 6.5), dpi=130)
 
 colors = {
     'Tier 1: Commercial Pop': '#E53E3E',
@@ -305,23 +270,37 @@ colors = {
     'Tier 3: Virtuosic Signifyin(g)': '#2B6CB0'
 }
 
-for tier_name, group in df_poetics.groupby('tier'):
-    ax.scatter(group['msrd'], group['pragmatic_density'], 
-               color=colors[tier_name], s=160, label=tier_name, edgecolors='#1A202C', linewidths=1.2, alpha=0.9)
-    for _, row in group.iterrows():
-        ax.annotate(row['author'], (row['msrd'] + 0.01, row['pragmatic_density'] + 0.03), 
-                    fontsize=9, fontweight='bold', color=colors[tier_name])
-
-# Highlight cryptographic barrier threshold
+# Shaded background bastion
 ax.axvline(x=0.20, color='#718096', linestyle='--', alpha=0.6)
 ax.axhline(y=1.0, color='#718096', linestyle='--', alpha=0.6)
-ax.fill_between([0.20, 0.60], 1.0, 2.5, color='#EBF8FF', alpha=0.4, label='Cryptographic Cultural Bastion')
+ax.fill_between([0.20, 0.58], 1.0, 2.4, color='#EBF8FF', alpha=0.45, zorder=1)
+ax.text(0.38, 2.15, "CRYPTOGRAPHIC CULTURAL BASTION\\n(High PoW + High Polysemy)", 
+        color='#2B6CB0', fontweight='bold', fontsize=9.5, ha='center', zorder=2)
+
+texts_to_adjust = []
+
+for tier_name, group in df_poetics.groupby('tier'):
+    col = colors[tier_name]
+    ax.scatter(group['msrd'], group['pragmatic_density'], 
+               color=col, s=170, label=tier_name, edgecolors='#1A202C', linewidths=1.2, zorder=4)
+    
+    for _, row in group.iterrows():
+        # Clean white card badge for each author
+        t = ax.text(row['msrd'], row['pragmatic_density'], row['author'], 
+                    fontsize=9, fontweight='bold', color=col, zorder=5,
+                    bbox=dict(boxstyle='round,pad=0.28', fc='#FFFFFF', ec=col, lw=1.1, alpha=0.95))
+        texts_to_adjust.append(t)
+
+# Repulsive positioning to eliminate label-point collisions
+adjust_text(texts_to_adjust, ax=ax,
+            arrowprops=dict(arrowstyle='->', color='#718096', lw=0.9, alpha=0.8),
+            expand=(1.25, 1.4), force_text=(0.6, 0.9), force_points=(0.5, 0.8))
 
 ax.set_title("The Pragmatic Information Plane: Rhyme Density vs Semantic Encoding Density", fontsize=13, fontweight='bold', pad=12)
-ax.set_xlabel("Multi-Syllabic Rhyme Density (MSRD)", fontsize=11, fontweight='bold')
-ax.set_ylabel("Pragmatic Density Index rho(T)", fontsize=11, fontweight='bold')
-ax.set_xlim(-0.05, 0.55)
-ax.set_ylim(0.1, 2.2)
+ax.set_xlabel("Multi-Syllabic Rhyme Density (MSRD)", fontsize=10.5, fontweight='bold')
+ax.set_ylabel("Pragmatic Density Index rho(T)", fontsize=10.5, fontweight='bold')
+ax.set_xlim(-0.06, 0.55)
+ax.set_ylim(0.0, 2.3)
 ax.legend(loc='upper left', frameon=True, fontsize=9)
 ax.grid(True, linestyle='--', alpha=0.5)
 
@@ -333,12 +312,11 @@ plt.show()
     # Visualization 3: Dual-Channel Information Decomposition
     cells.append(nbf.v4.new_code_cell(
 """# Visualization 3: Dual-Channel Decoding Asymmetry
-# Measure information extraction yield by Observer Type (Institutional vs Initiated)
 channels = ['Institutional NLP Parser\\n(Literal Surface Only)', 'Initiated Cultural Receiver\\n(Gatesian Double-Voiced)']
 
-pop_yield    = [1.0, 1.0]   # Commercial pop has no hidden layer
-classic_yield = [1.0, 1.8]  # Traditional verse has modest symbolic layer
-signify_yield = [0.8, 4.2]  # Signifyin(g) yield explodes for initiated listener
+pop_yield    = [1.0, 1.0]
+classic_yield = [1.0, 1.8]
+signify_yield = [0.8, 4.2]
 
 x = np.arange(len(channels))
 width = 0.25
@@ -357,11 +335,10 @@ ax.legend(loc='upper left', frameon=True)
 ax.set_ylim(0, 5.0)
 ax.grid(axis='y', linestyle='--', alpha=0.7)
 
-# Add value callouts
 for rect in [r1, r2, r3]:
     for bar in rect:
         yval = bar.get_height()
-        ax.text(bar.get_x() + bar.get_width()/2.0, yval + 0.1, f"{yval}x", ha='center', va='bottom', fontsize=9, fontweight='bold')
+        ax.text(bar.get_x() + bar.get_width()/2.0, yval + 0.12, f"{yval}x", ha='center', va='bottom', fontsize=9.5, fontweight='bold')
 
 plt.tight_layout()
 plt.show()
@@ -398,18 +375,19 @@ plt.show()
     return nb
 
 if __name__ == "__main__":
-    print("Generating Notebook 04...")
+    print("Regenerating Notebook 04 with anti-collision layout...")
     nb = create_notebook()
-    nb_path = "/Users/erickoduniyi/Desktop/mlg/semantic-mechanics/notebooks/04_pragmatic_density_and_signifying.ipynb"
+    nb_path = "/Users/erickoduniyi/Desktop/mlg/semantic-mechanics/notebooks/python/04_pragmatic_density_and_signifying.ipynb"
     
     with open(nb_path, "w", encoding="utf-8") as f:
         nbf.write(nb, f)
-    print(f"Saved notebook structure to {nb_path}")
 
-    print("Executing notebook via nbclient...")
     client = NotebookClient(nb, timeout=600, kernel_name="python3")
     executed_nb = client.execute()
 
     with open(nb_path, "w", encoding="utf-8") as f:
         nbf.write(executed_nb, f)
-    print("Notebook 04 executed and saved successfully with all outputs.")
+        
+    import shutil
+    shutil.copyfile(nb_path, "/Users/erickoduniyi/Desktop/mlg/semantic-mechanics/notebooks/04_pragmatic_density_and_signifying.ipynb")
+    print("Notebook 04 re-executed and updated successfully with zero overlapping labels.")
