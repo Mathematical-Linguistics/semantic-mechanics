@@ -94,8 +94,10 @@ jupyter lab notebooks/r/
 ```
 semantic-mechanics/
 ├── papers/
-│   ├── semantic_mechanics.tex    # LaTeX manuscript (single-column, anonymized)
-│   └── semantic_mechanics.pdf    # Compiled research paper (4 pages)
+│   ├── semantic_mechanics.tex       # Foundation paper: Linguistic economics & inversion
+│   ├── semantic_mechanics.pdf       # Compiled research paper (4 pages, anonymized)
+│   ├── hpc_cultural_mechanics.tex   # Systems paper: Zero-copy streaming & SIMD phonetics
+│   └── hpc_cultural_mechanics.pdf   # Compiled research paper (5 pages, anonymized)
 ├── models/
 │   ├── lifecycle.py             # Simulation of token inflation & inversion
 │   └── case_studies.json        # Structured case studies in math & vernaculars
