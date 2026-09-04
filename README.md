@@ -5,6 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Paper: PDF](https://img.shields.io/badge/Paper-PDF%20(4%20Pages)-purple.svg)](papers/semantic_mechanics.pdf)
 [![Model: Python](https://img.shields.io/badge/Model-Python%203.x-brightgreen.svg)](models/lifecycle.py)
+[![Notebooks: Jupyter (Python & R)](https://img.shields.io/badge/Notebooks-Jupyter%20(Python%20%26%20R)-orange.svg)](notebooks/)
 
 ---
 
@@ -38,6 +39,21 @@ Language operates analogously to a currency market with distinct lifecycle phase
 
 ---
 
+## "Processing Culture": The Data Science Notebook Series
+
+A complete series of executable Jupyter notebooks in Python and R applying rigorous data science, vector embeddings, dynamical systems modeling, and information theory to cultural evolution:
+
+| # | Notebook | Environment | Core Methods & Empirical Findings |
+|---|---|---|---|
+| **01** | [`01_notational_economics_diffusion.ipynb`](notebooks/01_notational_economics_diffusion.ipynb) | Python 3 (`ipykernel`) | **Notational Economics & Historical Network Diffusion**: Bass diffusion models of Leibniz differentials vs. Newtonian fluxions (1690–1830) and Chomskyan phrase trees vs. Lambek pregroups (1955–2025). Quantifies typing/printing transaction costs and institutional lock-in. |
+| **02** | [`02_semantic_inversion_embeddings.ipynb`](notebooks/02_semantic_inversion_embeddings.ipynb) | Python 3 (`ipykernel`) | **Semantic Inversion ($f \mapsto f^{-1}$) in Vernacular Embeddings**: Curated dual-register corpus (Standard vs. Hip-Hop). Empirically measures the catastrophic 90% false-negative failure rate of static sentiment analyzers (VADER) and projects lexical migration toward a **Virtuosity Attractor Pole** vs. **Pathology Attractor Pole**. |
+| **03** | [`03_cultural_arbitrage_and_debasement.ipynb`](notebooks/03_cultural_arbitrage_and_debasement.ipynb) | R (`ir` kernel) | **Cultural Arbitrage, The Commercialization Cliff, and Slang Half-Life**: Modeled with `ggplot2` and `dplyr`. Simulates the 5-stage lifecycle across case studies (`on fleek`, `bae`, `rizz`, `ill`). Identifies the "Cringe Cliff" tipping point at $\theta^* \approx 35\%$ corporate penetration where marginal in-group utility drops below zero. |
+| **04** | [`04_pragmatic_density_and_signifying.ipynb`](notebooks/04_pragmatic_density_and_signifying.ipynb) | Python 3 (`ipykernel`) | **Pragmatic Density, Gatesian *Signifyin(g)*, and Information Theory**: Multi-syllabic rhyme resonance matrices and dual-channel decoding asymmetry across commercial pop, traditional verse, and virtuosic hip-hop (MF DOOM, Rakim, Mos Def, Kendrick Lamar). Demonstrates how double-voiced poetics serves as cryptographic resistance. |
+
+All notebooks follow the strict data science standards: modular cells, high-contrast publication plots, executable outputs, and structured final summary sections (`### Q&A`, `### Data Analysis Key Findings`, `### Insights or Next Steps`).
+
+---
+
 ## Representational Case Studies
 
 ### 1. Leibniz vs. Newton (Calculus Notations)
@@ -62,19 +78,10 @@ A discrete-time dynamical simulation modeling in-group capital, mainstream adopt
 python3 models/lifecycle.py
 ```
 
-Example output:
-```text
-=== Simulating Semantic Mechanics for: 'sick/ill' (Vernacular (AAVE/Hip-Hop)) ===
-Epoch  State              Capital    Adoption   Entropy    Action
------------------------------------------------------------------
-1      sick/ill           1.00       0.00       1.00       Circulating
-2      sick/ill           0.97       0.13       1.04       Circulating
-3      sick/ill           0.92       0.26       1.11       Circulating
-4      sick/ill           0.84       0.38       1.23       Circulating
-5      sick/ill           0.75       0.51       1.38       Circulating
-6      sick/ill           0.64       0.64       1.57       Circulating
-7      sick/ill           0.53       0.76       1.80       Circulating
-8      sick/ill           0.43       0.89       2.07       Circulating
+### Running the Notebooks
+To run or inspect the notebooks interactively:
+```bash
+jupyter lab notebooks/
 ```
 
 ---
@@ -89,6 +96,11 @@ semantic-mechanics/
 ├── models/
 │   ├── lifecycle.py             # Simulation of token inflation & inversion
 │   └── case_studies.json        # Structured case studies in math & vernaculars
+├── notebooks/
+│   ├── 01_notational_economics_diffusion.ipynb     # Python 3: Diffusion of calculus & syntax
+│   ├── 02_semantic_inversion_embeddings.ipynb      # Python 3: Vernacular sign-flipping & VADER error
+│   ├── 03_cultural_arbitrage_and_debasement.ipynb   # R (IRkernel): 5-stage slang lifecycle & cringe cliff
+│   └── 04_pragmatic_density_and_signifying.ipynb    # Python 3: Multi-syllabic poetics & Signifyin(g)
 ├── data/
 │   └── corpus/                  # Excerpts and comparative text corpora
 └── README.md
