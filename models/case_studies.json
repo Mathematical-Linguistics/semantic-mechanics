@@ -1,0 +1,74 @@
+[
+  {
+    "case_id": "math_notation_leibniz_vs_newton",
+    "domain": "History of Mathematics",
+    "representation_a": {
+      "name": "Leibniz Differential Quotients",
+      "symbol": "dy/dx",
+      "economic_properties": {
+        "printing_cost": "Low (compatible with standard movable type)",
+        "cognitive_composability": "High (chain rule manifests as fraction cancellation)",
+        "adoption_vector": "Continental European universities (Bernoullis, Euler)"
+      }
+    },
+    "representation_b": {
+      "name": "Newtonian Fluxions",
+      "symbol": "\\dot{x}, \\ddot{x}",
+      "economic_properties": {
+        "printing_cost": "High (fragile dot accents prone to smudging/misprints)",
+        "cognitive_composability": "Low (geometric intuition hard to scale to partial derivatives)",
+        "adoption_vector": "British Royal Society isolationism"
+      }
+    },
+    "verdict": "Economic efficiency, composability, and print ergonomics dominated conceptual priority."
+  },
+  {
+    "case_id": "linguistics_chomsky_vs_lambek",
+    "domain": "Formal Syntax & Linguistics",
+    "representation_a": {
+      "name": "Chomskyan Phrase Structure Trees",
+      "symbol": "S -> NP VP",
+      "economic_properties": {
+        "institutional_funding": "Cold War military machine-translation grants (DARPA/RLE)",
+        "computational_alignment": "Matched von Neumann pushdown automata and early compilers",
+        "institutionalization": "MIT, generative cognitive science curriculum"
+      }
+    },
+    "representation_b": {
+      "name": "Lambek Pregroups & Categorial Grammars",
+      "symbol": "s * n^l",
+      "economic_properties": {
+        "institutional_funding": "Minimal (pure algebra / category theory)",
+        "computational_alignment": "Planar string diagrams, non-commutative monoids",
+        "institutionalization": "Theoretical niche until quantum compositional NLP (DisCoCat)"
+      }
+    },
+    "verdict": "Institutional capital and hardware-era alignment dictated representation supremacy."
+  },
+  {
+    "case_id": "vernacular_semantic_inversion",
+    "domain": "African American Vernacular English & Hip-Hop",
+    "mechanic": "Polarity Inversion (Semantic Inverse)",
+    "examples": [
+      {
+        "term": "bad",
+        "institutional_valuation": "-1.0 (moral defect, inferior quality)",
+        "reclaimed_valuation": "+1.0 (extraordinary, formidable, supreme)",
+        "pragmatic_function": "Subverts carceral/institutional moral judgment into sovereign credit"
+      },
+      {
+        "term": "ill / sick",
+        "institutional_valuation": "-1.0 (pathology, infection, morbidity)",
+        "reclaimed_valuation": "+1.0 (unmatched lyrical virtuosity, boundary-breaking skill)",
+        "pragmatic_function": "Inverts vulnerability into athletic/poetic mastery"
+      }
+    ],
+    "economic_lifecycle": [
+      "1. Subcultural Minting: Coined in cyphers and local communities under acute social constraints.",
+      "2. In-Group Liquidity: Operates as high-trust, high-signal cryptographic credit.",
+      "3. Corporate Arbitrage: Commercial advertising and tech platforms extract the sign for margin.",
+      "4. Semantic Inflation: Ubiquitous dilution turns the sign sterile ('cringe').",
+      "5. Re-inversion: Originators abandon the burned sign and mint a fresh linguistic derivative."
+    ]
+  }
+]
