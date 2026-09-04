@@ -3,7 +3,6 @@
 **Mathematical Linguistics Group (mlG)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Paper: PDF](https://img.shields.io/badge/Paper-PDF%20(4%20Pages)-purple.svg)](papers/semantic_mechanics.pdf)
 [![Model: Python](https://img.shields.io/badge/Model-Python%203.x-brightgreen.svg)](models/lifecycle.py)
 [![Notebooks: Python & R](https://img.shields.io/badge/Notebooks-Python%20%7C%20R%20(Jupyter)-orange.svg)](notebooks/)
 
