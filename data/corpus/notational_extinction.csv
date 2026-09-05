@@ -1,0 +1,28 @@
+system,epoch,notation,share_pct,domain,retention_type
+Mathematics,1700,Newtonian Fluxions (x-dot),48.0,Calculus (UK),Doctrinal Monopoly
+Mathematics,1700,Leibnizian Differentials (dy/dx),52.0,Calculus (Continent),Operational Fitness
+Mathematics,1740,Newtonian Fluxions (x-dot),38.0,Calculus (UK),Doctrinal Monopoly
+Mathematics,1740,Leibnizian Differentials (dy/dx),62.0,Calculus (Europe-wide),Operational Fitness
+Mathematics,1780,Newtonian Fluxions (x-dot),24.0,Calculus (UK isolated),Institutional Inertia
+Mathematics,1780,Leibnizian Differentials (dy/dx),76.0,Calculus (Europe-wide),Operational Fitness
+Mathematics,1812,Newtonian Fluxions (x-dot),14.0,Calculus (Cambridge pre-reform),Institutional Inertia
+Mathematics,1812,Leibnizian Differentials (dy/dx),86.0,Calculus (Analytical Society),Tipping Point
+Mathematics,1840,Newtonian Fluxions (x-dot),4.0,Specialized Mechanics (dt only),Niche Remnant
+Mathematics,1840,Leibnizian Differentials (dy/dx),96.0,Calculus (Global),Global Standard
+Mathematics,1900,Newtonian Fluxions (x-dot),2.0,Specialized Dynamics,Extinction / Micro-niche
+Mathematics,1900,Leibnizian Differentials (dy/dx),98.0,Calculus (Global),Global Standard
+Programming Syntax,1975,S-Expressions (Lisp),28.0,Symbolic AI & Academia,Homoiconic Coexistence
+Programming Syntax,1975,C-Style Braces ({}),18.0,Systems & Unix,Parsing Determinism
+Programming Syntax,1975,Algol/Pascal Keywords (begin/end),54.0,General Purpose,Early Dominance
+Programming Syntax,1990,C-Style Braces ({}),62.0,C / C++ / Unix / Windows,Standardization
+Programming Syntax,1990,Algol/Pascal Keywords (begin/end),22.0,Pascal / Ada / BASIC,Decline
+Programming Syntax,1990,S-Expressions (Lisp),12.0,Lisp / Scheme / Emacs,Specialized Macro Niche
+Programming Syntax,1990,Off-side Whitespace (Python/ABC),4.0,Scripting / Script-first,Emergence
+Programming Syntax,2005,C-Style Braces ({}),68.0,Java / C# / C++ / JavaScript / PHP,Dominant Plurality
+Programming Syntax,2005,Off-side Whitespace (Python/Haskell),16.0,Python / Haskell / YAML,Rapid Expansion
+Programming Syntax,2005,S-Expressions (Lisp),8.0,Scheme / Common Lisp,Resilient Bastion
+Programming Syntax,2005,Algol/Pascal Keywords (begin/end),8.0,Ruby / Lua / Delphi,Specialized Coexistence
+Programming Syntax,2025,C-Style Braces ({}),56.0,Rust / Go / JS / TS / C++ / Java,Stable Plurality
+Programming Syntax,2025,Off-side Whitespace (Python/Haskell),31.0,Python (AI/ML) / YAML / Nim,Polyglot Standard
+Programming Syntax,2025,S-Expressions (Lisp),7.0,Clojure / Racket / Janet / Hy,Evergreen Macro Ecosystem
+Programming Syntax,2025,Algol/Pascal Keywords (begin/end),6.0,Ruby / Julia / Elixir / Lua,Expression-based Coexistence

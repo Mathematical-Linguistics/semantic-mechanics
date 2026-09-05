@@ -1,0 +1,20 @@
+term,category,domain,year_introduced,half_life_years,current_valence,durability_status,source_origin
+Imbecile / Moron,Institutional Euphemism,Cognitive Capacity,1910,18,-0.85,Pejorated / Slur,American Assoc. on Mental Deficiency (Goddard)
+Feeble-Minded,Institutional Euphemism,Cognitive Capacity,1925,22,-0.8,Pejorated / Extinct,Clinical Classification
+Mentally Retarded,Institutional Euphemism,Cognitive Capacity,1961,24,-0.9,Legally Replaced (Rosa's Law 2010),President's Committee on Mental Retardation
+Special Needs,Institutional Euphemism,Cognitive Capacity,1988,19,-0.35,Under Replacement Pressure,Educational Jurisprudence
+Intellectually Disabled,Institutional Euphemism,Cognitive Capacity,2007,17,0.1,In Active Decay,AAIDD Re-naming
+Neurodivergent,Institutional Euphemism,Cognitive Capacity,1998,28,0.65,Active Identity Appropriation,Judy Singer (Sociologist)
+Pauper / Indigent,Institutional Euphemism,Socioeconomic Status,1880,25,-0.7,Pejorated / Archaic,Poor Laws / Legal Codes
+Underprivileged,Institutional Euphemism,Socioeconomic Status,1935,28,-0.25,Depreciated / Disused,New Deal Policy Discourse
+Disadvantaged,Institutional Euphemism,Socioeconomic Status,1964,22,-0.3,Depreciated / Administrative,War on Poverty Legislation
+At-Risk / Low-Income,Institutional Euphemism,Socioeconomic Status,1983,20,-0.15,Under Replacement Pressure,A Nation at Risk / Federal Guidelines
+Marginalized / Under-Resourced,Institutional Euphemism,Socioeconomic Status,2012,16,0.2,Institutional Bureaucracy,Academic & NGO Taxonomy
+Cool,Organic Vernacular Shield,Aesthetic & Social Prestige,1933,93,0.95,Universalized Global Prestige,African American Jazz Vernacular (Lester Young)
+Hip / Cat,Organic Vernacular Shield,Aesthetic & Social Prestige,1938,65,0.7,Durable Cultural Keystone,Harlem Renaissance / Jazz Jive Talk
+Bad (as Excellent),Organic Vernacular Shield,Enantiosemic Inversion,1955,70,0.85,Durable Enantiosemic Inversion,AAVE Vernacular Inversion
+Dope,Organic Vernacular Shield,Aesthetic & Social Prestige,1981,45,0.9,Active Subcultural & Mainstream Prestige,Early Hip-Hop & B-Boy Culture
+Ill,Organic Vernacular Shield,Enantiosemic Inversion,1985,41,0.8,Sustained Vernacular Prestige,Golden Era NYC Hip-Hop (Beastie Boys / Run-DMC)
+Sick,Organic Vernacular Shield,Enantiosemic Inversion,1994,32,0.85,Skate / Snow / Global Youth Vernacular,Extreme Sports & Hip-Hop Convergence
+Fire,Organic Vernacular Shield,Aesthetic & Social Prestige,2005,21,0.9,Dominant Digital Vernacular,Southern & Internet Rap Vernacular
+GOAT,Organic Vernacular Shield,Aesthetic & Social Prestige,1992,34,0.95,Institutionalized Athletic & Lexical Canon,Muhammad Ali (Lonnie Ali) / LL Cool J

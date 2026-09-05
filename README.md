@@ -50,6 +50,7 @@ The project provides complete parallel suites of executable Jupyter notebooks in
 | **02** | **Semantic Inversion & Embeddings** | [`02_semantic_inversion_embeddings.ipynb`](notebooks/python/02_semantic_inversion_embeddings.ipynb) | [`02_semantic_inversion_embeddings.ipynb`](notebooks/r/02_semantic_inversion_embeddings.ipynb) | **Antonymic Sign Inversion ($f \mapsto f^{-1}$)**: Evaluates dual-register corpora. Quantifies the **90.0% false-negative error rate** of standard sentiment lexicons on vernacular praise, and projects vector migration toward a **Virtuosity Attractor Pole** vs. **Pathology Attractor Pole**. |
 | **03** | **Cultural Arbitrage & Debasement** | [`03_cultural_arbitrage_and_debasement.ipynb`](notebooks/python/03_cultural_arbitrage_and_debasement.ipynb) | [`03_cultural_arbitrage_and_debasement.ipynb`](notebooks/r/03_cultural_arbitrage_and_debasement.ipynb) | **The 5-Stage Slang Lifecycle & The Cringe Cliff**: Simulates capital decay across case studies (`on fleek`, `bae`, `rizz`, `ill`). Demonstrates that at corporate penetration $\theta^* \approx 35\%$, marginal utility turns negative ($U < 0$), causing community abandonment. |
 | **04** | **Pragmatic Density & Signifyin(g)** | [`04_pragmatic_density_and_signifying.ipynb`](notebooks/python/04_pragmatic_density_and_signifying.ipynb) | [`04_pragmatic_density_and_signifying.ipynb`](notebooks/r/04_pragmatic_density_and_signifying.ipynb) | **Gatesian Double-Voiced Discourse & Poetics**: Measures Multi-Syllabic Rhyme Density (MSRD) as Proof-of-Work (PoW) in MF DOOM, Rakim, and Kendrick Lamar. Measures the Pragmatic Density Index $\rho_{\text{pragmatic}}$, demonstrating how double-voiced poetics serves as cryptographic resistance against automated scraping. |
+| **05** | **Visual Linguistic Studies & Empirical Hypotheses** | [`05_linguistic_hypotheses_visual_studies.ipynb`](notebooks/python/05_linguistic_hypotheses_visual_studies.ipynb) | [`05_linguistic_hypotheses_visual_studies.ipynb`](notebooks/r/05_linguistic_hypotheses_visual_studies.ipynb) | **Empirical Hypothesis Testing (Hypotheses 6, 5, 4)**: Representational Economics (1812 Cambridge Analytical Society vs. 2025 polyglot syntax), The Working Vocabulary Horizon (Matt Daniels' hip-hop vs. Shakespeare/Melville), and Semantic Durability (Pinker's Euphemism Treadmill vs. Vernacular Shields). |
 
 All notebooks adhere strictly to scientific communication standards: modular cells, high-contrast publication plots, pre-computed execution outputs, and structured final summary sections (`### Q&A`, `### Data Analysis Key Findings`, `### Insights or Next Steps`).
 
@@ -102,18 +103,31 @@ semantic-mechanics/
 │   ├── lifecycle.py             # Simulation of token inflation & inversion
 │   └── case_studies.json        # Structured case studies in math & vernaculars
 ├── notebooks/
-│   ├── python/                  # Complete Python 3 Jupyter Suite (All 4 Notebooks)
+│   ├── python/                  # Complete Python 3 Jupyter Suite (01–05)
 │   │   ├── 01_notational_economics_diffusion.ipynb
 │   │   ├── 02_semantic_inversion_embeddings.ipynb
 │   │   ├── 03_cultural_arbitrage_and_debasement.ipynb
-│   │   └── 04_pragmatic_density_and_signifying.ipynb
-│   └── r/                       # Complete R (IRkernel / ggplot2) Suite (All 4 Notebooks)
+│   │   ├── 04_pragmatic_density_and_signifying.ipynb
+│   │   └── 05_linguistic_hypotheses_visual_studies.ipynb
+│   └── r/                       # Complete R (IRkernel / ggplot2) Suite (01–05)
 │       ├── 01_notational_economics_diffusion.ipynb
 │       ├── 02_semantic_inversion_embeddings.ipynb
 │       ├── 03_cultural_arbitrage_and_debasement.ipynb
-│       └── 04_pragmatic_density_and_signifying.ipynb
+│       ├── 04_pragmatic_density_and_signifying.ipynb
+│       └── 05_linguistic_hypotheses_visual_studies.ipynb
+├── visuals/                     # Publication Visual Studies & High-Res Renders
+│   ├── hyp6_notational_extinction_vs_polyglot.png
+│   ├── hyp5_vocabulary_horizon_hiphop_vs_canon.png
+│   ├── hyp4_euphemism_treadmill_vs_vernacular_shield.png
+│   ├── 01_obsidian_spectral_manifold.png
+│   ├── 02_risograph_archival_cartography.png
+│   ├── 03_thermal_inversion_phase_space.png
+│   └── 04_assonance_constellation.png
 ├── data/
-│   └── corpus/                  # Excerpts and comparative text corpora
+│   └── corpus/                  # Empirical Linguistic & Cultural Datasets
+│       ├── notational_extinction.csv
+│       ├── vocabulary_horizon.csv
+│       └── euphemism_treadmill.csv
 └── README.md
 ```
 
