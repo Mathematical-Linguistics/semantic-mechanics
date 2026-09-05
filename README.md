@@ -44,13 +44,14 @@ The project provides complete parallel suites of executable Jupyter notebooks in
 
 ### The Complete Series
 
-| # | Topic | Python Track (`notebooks/python/`) | R Track (`notebooks/r/`) | Core Methods & Empirical Findings |
-|---|---|---|---|---|
-| **01** | **Notational Economics & Diffusion** | [`01_notational_economics_diffusion.ipynb`](notebooks/python/01_notational_economics_diffusion.ipynb) | [`01_notational_economics_diffusion.ipynb`](notebooks/r/01_notational_economics_diffusion.ipynb) | **Bass Diffusion of Calculus & Syntax**: Leibnizian differentials vs. Newtonian fluxions (1690–1830) and Chomskyan phrase trees vs. Lambek pregroups (1955–2025). Models typographical transaction costs ($T_C$) and cognitive entry barriers ($C_{\text{entry}}$). |
-| **02** | **Semantic Inversion & Embeddings** | [`02_semantic_inversion_embeddings.ipynb`](notebooks/python/02_semantic_inversion_embeddings.ipynb) | [`02_semantic_inversion_embeddings.ipynb`](notebooks/r/02_semantic_inversion_embeddings.ipynb) | **Antonymic Sign Inversion ($f \mapsto f^{-1}$)**: Evaluates dual-register corpora. Quantifies the **90.0% false-negative error rate** of standard sentiment lexicons on vernacular praise, and projects vector migration toward a **Virtuosity Attractor Pole** vs. **Pathology Attractor Pole**. |
-| **03** | **Cultural Arbitrage & Debasement** | [`03_cultural_arbitrage_and_debasement.ipynb`](notebooks/python/03_cultural_arbitrage_and_debasement.ipynb) | [`03_cultural_arbitrage_and_debasement.ipynb`](notebooks/r/03_cultural_arbitrage_and_debasement.ipynb) | **The 5-Stage Slang Lifecycle & The Cringe Cliff**: Simulates capital decay across case studies (`on fleek`, `bae`, `rizz`, `ill`). Demonstrates that at corporate penetration $\theta^* \approx 35\%$, marginal utility turns negative ($U < 0$), causing community abandonment. |
-| **04** | **Pragmatic Density & Signifyin(g)** | [`04_pragmatic_density_and_signifying.ipynb`](notebooks/python/04_pragmatic_density_and_signifying.ipynb) | [`04_pragmatic_density_and_signifying.ipynb`](notebooks/r/04_pragmatic_density_and_signifying.ipynb) | **Gatesian Double-Voiced Discourse & Poetics**: Measures Multi-Syllabic Rhyme Density (MSRD) as Proof-of-Work (PoW) in MF DOOM, Rakim, and Kendrick Lamar. Measures the Pragmatic Density Index $\rho_{\text{pragmatic}}$, demonstrating how double-voiced poetics serves as cryptographic resistance against automated scraping. |
-| **05** | **Visual Linguistic Studies & Empirical Hypotheses** | [`05_linguistic_hypotheses_visual_studies.ipynb`](notebooks/python/05_linguistic_hypotheses_visual_studies.ipynb) | [`05_linguistic_hypotheses_visual_studies.ipynb`](notebooks/r/05_linguistic_hypotheses_visual_studies.ipynb) | **Empirical Hypothesis Testing (Hypotheses 6, 5, 4)**: Representational Economics (1812 Cambridge Analytical Society vs. 2025 polyglot syntax), The Working Vocabulary Horizon (Matt Daniels' hip-hop vs. Shakespeare/Melville), and Semantic Durability (Pinker's Euphemism Treadmill vs. Vernacular Shields). |
+| # | Topic | Python Track | R Track | Focus |
+|---|---|:---:|:---:|---|
+| **01** | **Notational Economics** | [`01_python`](notebooks/python/01_notational_economics_diffusion.ipynb) | [`01_r`](notebooks/r/01_notational_economics_diffusion.ipynb) | Bass diffusion of notation (Leibniz vs. Newton, Chomsky vs. Lambek) and cognitive friction. |
+| **02** | **Semantic Inversion** | [`02_python`](notebooks/python/02_semantic_inversion_embeddings.ipynb) | [`02_r`](notebooks/r/02_semantic_inversion_embeddings.ipynb) | Polarity inversion ($f \mapsto f^{-1}$) and 90% benchmark error on vernacular praise. |
+| **03** | **Cultural Arbitrage** | [`03_python`](notebooks/python/03_cultural_arbitrage_and_debasement.ipynb) | [`03_r`](notebooks/r/03_cultural_arbitrage_and_debasement.ipynb) | 5-stage token lifecycle, marginal utility decay, and corporate saturation thresholds ($\theta^* \approx 35\%$). |
+| **04** | **Pragmatic Density** | [`04_python`](notebooks/python/04_pragmatic_density_and_signifying.ipynb) | [`04_r`](notebooks/r/04_pragmatic_density_and_signifying.ipynb) | Double-voiced discourse, multisyllabic rhyme density (MSRD), and cryptographic resistance. |
+| **05** | **Visual Empirical Studies** | [`05_python`](notebooks/python/05_linguistic_hypotheses_visual_studies.ipynb) | [`05_r`](notebooks/r/05_linguistic_hypotheses_visual_studies.ipynb) | Empirical tests for notational extinction, vocabulary horizons, and vernacular shields. |
+| **06** | **HPC Cultural Mechanics** | [`06_python`](notebooks/python/06_hpc_cultural_mechanics_pipeline.ipynb) | — | Streaming zero-copy HPC pipeline for corpus phonetics and dynamic phase portraits. |
 
 All notebooks adhere strictly to scientific communication standards: modular cells, high-contrast publication plots, pre-computed execution outputs, and structured final summary sections (`### Q&A`, `### Data Analysis Key Findings`, `### Insights or Next Steps`).
 
@@ -94,40 +95,33 @@ jupyter lab notebooks/r/
 
 ```
 semantic-mechanics/
-├── papers/
-│   ├── semantic_mechanics.tex       # Foundation paper: Linguistic economics & inversion
-│   ├── semantic_mechanics.pdf       # Compiled research paper (4 pages, anonymized)
-│   ├── hpc_cultural_mechanics.tex   # Systems paper: Zero-copy streaming & SIMD phonetics
-│   └── hpc_cultural_mechanics.pdf   # Compiled research paper (5 pages, anonymized)
+├── lectures/
+│   ├── lecture_01_cultural_mechanics.tex   # Monograph: Cultural Mechanics (6 pages)
+│   ├── lecture_01_cultural_mechanics.pdf   # Compiled PDF monograph
+│   └── lecture_01_cultural_mechanics.md    # Companion lecture notes & syllabus
 ├── models/
-│   ├── lifecycle.py             # Simulation of token inflation & inversion
-│   └── case_studies.json        # Structured case studies in math & vernaculars
+│   ├── lifecycle.py                        # Simulation of token inflation & inversion
+│   └── case_studies.json                   # Structured case studies in math & vernaculars
 ├── notebooks/
-│   ├── python/                  # Complete Python 3 Jupyter Suite (01–05)
+│   ├── python/                             # Python 3 Jupyter Suite (01–06)
 │   │   ├── 01_notational_economics_diffusion.ipynb
 │   │   ├── 02_semantic_inversion_embeddings.ipynb
 │   │   ├── 03_cultural_arbitrage_and_debasement.ipynb
 │   │   ├── 04_pragmatic_density_and_signifying.ipynb
-│   │   └── 05_linguistic_hypotheses_visual_studies.ipynb
-│   └── r/                       # Complete R (IRkernel / ggplot2) Suite (01–05)
+│   │   ├── 05_linguistic_hypotheses_visual_studies.ipynb
+│   │   └── 06_hpc_cultural_mechanics_pipeline.ipynb
+│   └── r/                                  # R (IRkernel / ggplot2) Suite (01–05)
 │       ├── 01_notational_economics_diffusion.ipynb
 │       ├── 02_semantic_inversion_embeddings.ipynb
 │       ├── 03_cultural_arbitrage_and_debasement.ipynb
 │       ├── 04_pragmatic_density_and_signifying.ipynb
 │       └── 05_linguistic_hypotheses_visual_studies.ipynb
-├── visuals/                     # Publication Visual Studies & High-Res Renders
-│   ├── hyp6_notational_extinction_vs_polyglot.png
-│   ├── hyp5_vocabulary_horizon_hiphop_vs_canon.png
-│   ├── hyp4_euphemism_treadmill_vs_vernacular_shield.png
-│   ├── 01_obsidian_spectral_manifold.png
-│   ├── 02_risograph_archival_cartography.png
-│   ├── 03_thermal_inversion_phase_space.png
-│   └── 04_assonance_constellation.png
 ├── data/
-│   └── corpus/                  # Empirical Linguistic & Cultural Datasets
+│   └── corpus/                             # Empirical Linguistic & Cultural Datasets
 │       ├── notational_extinction.csv
 │       ├── vocabulary_horizon.csv
 │       └── euphemism_treadmill.csv
+├── research/                               # (Ignored) Papers, proofs, and high-res visuals
 └── README.md
 ```
 
