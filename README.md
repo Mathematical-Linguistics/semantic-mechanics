@@ -53,8 +53,6 @@ The project provides complete parallel suites of executable Jupyter notebooks in
 | **05** | **Visual Empirical Studies** | [`05_python`](notebooks/python/05_linguistic_hypotheses_visual_studies.ipynb) | [`05_r`](notebooks/r/05_linguistic_hypotheses_visual_studies.ipynb) | Empirical tests for notational extinction, vocabulary horizons, and vernacular shields. |
 | **06** | **HPC Cultural Mechanics** | [`06_python`](notebooks/python/06_hpc_cultural_mechanics_pipeline.ipynb) | — | Streaming zero-copy HPC pipeline for corpus phonetics and dynamic phase portraits. |
 
-All notebooks adhere strictly to scientific communication standards: modular cells, high-contrast publication plots, pre-computed execution outputs, and structured final summary sections (`### Q&A`, `### Data Analysis Key Findings`, `### Insights or Next Steps`).
-
 ---
 
 ## Representational Case Studies
@@ -121,12 +119,5 @@ semantic-mechanics/
 │       ├── notational_extinction.csv
 │       ├── vocabulary_horizon.csv
 │       └── euphemism_treadmill.csv
-├── research/                               # (Ignored) Papers, proofs, and high-res visuals
 └── README.md
 ```
-
----
-
-## Identity & Collaboration
-
-Semantic Mechanics is an initiative of the **Mathematical Linguistics Group (mlG)** (`https://github.com/Mathematical-Linguistics`), connecting formal syntax and category theory with cultural evolution, pragmatics, and living language.
