@@ -10,6 +10,17 @@
 \usepackage{algpseudocode}
 \usepackage{xcolor}
 \usepackage{cite}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc,decorations.pathreplacing,patterns}
+
+\definecolor{tierbg}{HTML}{F8FAFC}
+\definecolor{tierborder}{HTML}{CBD5E1}
+\definecolor{cellbg}{HTML}{FFFFFF}
+\definecolor{cellborder}{HTML}{94A3B8}
+\definecolor{accentblue}{HTML}{1E40AF}
+\definecolor{accentteal}{HTML}{0D9488}
+\definecolor{accentorange}{HTML}{EA580C}
+\definecolor{accentpurple}{HTML}{7C3AED}
 
 \hypersetup{
     colorlinks=true,
@@ -54,41 +65,154 @@ Quantifying semantic inversion ($I_w$) requires projecting an evolving vocabular
 
 We propose a modular, three-tier high-performance architecture (Figure~\ref{fig:arch}) that circumvents these bottlenecks through explicit hardware alignment.
 
-\begin{figure}[htbp]
+\begin{figure*}[t]
 \centering
-\fbox{
-\begin{minipage}{0.92\textwidth}
-\vspace{0.3em}
-\textbf{Tier 1: Out-of-Core Storage \& Zero-Copy Streaming Engine}
-\begin{itemize}
-    \item Columnar Parquet / Apache Arrow IPC format.
-    \item Memory-mapped files (\texttt{mmap}) with vectorized pushdown predicates (DuckDB).
-    \item Vector batches (2048 tuples) stream directly into CPU L1/L2 caches without heap allocation.
-\end{itemize}
-\vspace{0.1em}
-\hrulefill
-\vspace{0.1em}
-\textbf{Tier 2: Kernel-Accelerated Phonetic Bitmasking (SIMD)}
-\begin{itemize}
-    \item Phoneme encoding into 64-bit unsigned integers: $\mathbf{b} \in \{0, 1\}^{64}$.
-    \item Syllabic match via bitwise XOR ($\oplus$) and vector popcount (\texttt{\_mm\_popcnt\_u64}).
-    \item Combinatorial alignment accelerated by $> 500\times$ over regex baselines.
-\end{itemize}
-\vspace{0.1em}
-\hrulefill
-\vspace{0.1em}
-\textbf{Tier 3: Distributed Tensor Contractions \& Online Dimensionality Reduction}
-\begin{itemize}
-    \item Level-3 BLAS GEMM ($S = \hat{X}\hat{C}^T$) on GPU Tensor Cores / Apple Silicon MPS.
-    \item Incremental low-rank updates (Streaming SVD) for continuous diachronic tracking.
-    \item Distributed map-reduce DAGs across cluster nodes via monoidal reduction.
-\end{itemize}
-\vspace{0.3em}
-\end{minipage}
+\begin{tikzpicture}[
+    scale=0.92, transform shape,
+    font=\sffamily\footnotesize,
+    tierbgbox/.style={draw=tierborder, fill=tierbg, rounded corners=5pt, line width=0.8pt},
+    gridcell/.style={draw=cellborder, fill=white, minimum size=0.38cm, inner sep=0pt, font=\tiny\ttfamily},
+    rhymecell/.style={draw=accentteal, fill=teal!30, minimum size=0.38cm, inner sep=0pt, font=\tiny\ttfamily\bfseries},
+    arr/.style={-{Stealth[length=5pt]}, line width=1pt, draw=gray!70!black}
+]
+
+% ==================== TIER 1 ====================
+\draw[tierbgbox] (-0.5, 7.8) rectangle (15.5, 11.2);
+\node[anchor=north west, font=\sffamily\bfseries\small, color=accentblue] at (-0.3, 11.0) 
+    {Tier 1: Out-of-Core Columnar Memory Grid \& Zero-Copy Vector Streaming};
+
+\node[anchor=west, font=\scriptsize\bfseries] at (0, 10.3) {Arrow Contiguous Columnar Memory Block (2048-tuple Vector Chunks):};
+
+% Table columns
+\node[anchor=east, font=\tiny\ttfamily] at (1.5, 9.7) {Token:};
+\node[anchor=east, font=\tiny\ttfamily] at (1.5, 9.2) {Epoch:};
+\node[anchor=east, font=\tiny\ttfamily] at (1.5, 8.7) {Valence:};
+
+\foreach \x/\wrd/\ep/\val in {
+    1.7/{dope}/1981/{+0.90},
+    2.8/{ill}/1985/{+0.80},
+    3.9/{bad}/1955/{+0.85},
+    5.0/{fire}/2005/{+0.90},
+    6.1/{cool}/1933/{+0.95},
+    7.2/{mid}/2021/{-0.65},
+    8.3/{cap}/2018/{-0.40},
+    9.4/{bet}/2016/{+0.75}
+} {
+    \node[draw=cellborder, fill=white, minimum width=1.0cm, minimum height=0.42cm, font=\tiny\ttfamily] at (\x+0.5, 9.7) {\wrd};
+    \node[draw=cellborder, fill=white, minimum width=1.0cm, minimum height=0.42cm, font=\tiny\ttfamily] at (\x+0.5, 9.2) {\ep};
+    \node[draw=accentblue!60, fill=blue!10, minimum width=1.0cm, minimum height=0.42cm, font=\tiny\ttfamily\bfseries] at (\x+0.5, 8.7) {\val};
 }
-\caption{Three-Tier HPC Architectural Hierarchy for Cultural Mechanics.}
+
+% Zero-Copy Bracket
+\draw[decorate, decoration={brace, amplitude=5pt, mirror}, line width=0.9pt, color=accentorange] 
+    (2.1, 8.35) -- (7.7, 8.35) node[midway, below=4pt, font=\tiny\bfseries, color=accentorange] 
+    {Zero-Copy Pointer Window [Offset: 0, Length: 5] (Ptr Arithmetic, Memcpy = 0 bytes)};
+
+% Pushdown Filter Callout
+\node[draw=accentblue, fill=white, rounded corners=3pt, line width=0.7pt, anchor=west, align=center, font=\scriptsize] at (11.0, 9.2) {
+    \textbf{Vectorized Pushdown}\\[0.15em]
+    \texttt{WHERE Valence > 0.0}\\[0.15em]
+    \color{accentteal}\textbf{L1/L2 Cache Streaming}
+};
+
+% ==================== TIER 2 ====================
+\draw[tierbgbox] (-0.5, 3.8) rectangle (15.5, 7.4);
+\node[anchor=north west, font=\sffamily\bfseries\small, color=accentteal] at (-0.3, 7.2) 
+    {Tier 2: SIMD 64-Bit Syllable Register Grid \& 2D Couplet Rhyme Matrix};
+
+\node[anchor=west, font=\scriptsize\bfseries] at (0, 6.6) {64-Bit Syllable Register Grid $\mathbf{b}_\sigma \in \{0, 1\}^{64}$:};
+
+% Syllable Register Cells
+\node[draw=accentpurple, fill=purple!15, minimum width=1.1cm, minimum height=0.45cm, font=\tiny\bfseries] at (0.8, 6.05) {STRS (2b)};
+\node[draw=accentblue, fill=blue!15, minimum width=2.1cm, minimum height=0.45cm, font=\tiny\bfseries] at (2.45, 6.05) {VOWEL CLASS (6b)};
+\node[draw=accentteal, fill=teal!15, minimum width=1.3cm, minimum height=0.45cm, font=\tiny\bfseries] at (4.2, 6.05) {HEIGHT (3b)};
+\node[draw=accentteal, fill=teal!10, minimum width=1.1cm, minimum height=0.45cm, font=\tiny\bfseries] at (5.45, 6.05) {BCK (2b)};
+\node[draw=gray!80, fill=gray!15, minimum width=1.6cm, minimum height=0.45cm, font=\tiny\bfseries] at (6.85, 6.05) {ONSET (8b)};
+\node[draw=accentorange, fill=orange!15, minimum width=1.6cm, minimum height=0.45cm, font=\tiny\bfseries] at (8.5, 6.05) {CODA (8b)};
+\node[draw=gray!50, fill=gray!5, minimum width=2.2cm, minimum height=0.45cm, font=\tiny] at (10.45, 6.05) {RESERVED (35b)};
+
+% Instruction Formula
+\node[draw=accentteal, fill=white, rounded corners=3pt, anchor=west, font=\scriptsize, align=left] at (0, 4.8) {
+    \textbf{Single-Cycle SIMD Instruction:}\\[0.15em]
+    $\text{IsRhyme}(\mathbf{b}_i, \mathbf{b}_j) = \Big( (\mathbf{b}_i \oplus \mathbf{b}_j) \;\&\; \mathbf{M}_{\text{nucleus}} \Big) == 0$\\[0.15em]
+    \color{accentteal}\textbf{AVX2 / NEON: 1 Clock Cycle per Pair}
+};
+
+% 2D Outer-Product Rhyme Matrix
+\node[font=\bfseries\scriptsize, anchor=west] at (7.8, 5.2) {Outer-Product Rhyme Matrix $\mathbf{A} \in \{0, 1\}^{M \times N}$:};
+
+\foreach \i in {0,...,4} {
+    \foreach \j in {0,...,4} {
+        \node[gridcell] at (9.0 + \j*0.38, 4.8 - \i*0.38) {};
+    }
+}
+% Banded diagonal
+\node[rhymecell] at (9.0 + 1*0.38, 4.8 - 0*0.38) {X};
+\node[rhymecell] at (9.0 + 2*0.38, 4.8 - 1*0.38) {X};
+\node[rhymecell] at (9.0 + 3*0.38, 4.8 - 2*0.38) {X};
+\node[rhymecell] at (9.0 + 4*0.38, 4.8 - 3*0.38) {X};
+
+\draw[-{Stealth[length=4pt]}, line width=0.8pt, color=accentteal] (11.5, 4.2) -- (10.6, 4.2);
+\node[font=\tiny\bfseries, color=accentteal, anchor=west, align=left] at (11.6, 4.2) {Banded Diagonal =\\Multi-Syllabic PoW};
+
+% ==================== TIER 3 ====================
+\draw[tierbgbox] (-0.5, 0.0) rectangle (15.5, 3.4);
+\node[anchor=north west, font=\sffamily\bfseries\small, color=accentorange] at (-0.3, 3.2) 
+    {Tier 3: Distributed BLAS-3 GEMM Tensor Block Tiling \& Inversion Vector};
+
+% Matrix X
+\node[font=\bfseries\scriptsize] at (1.2, 2.6) {Token Embeddings $\mathbf{X}$};
+\node[font=\tiny\ttfamily, color=gray!80] at (1.2, 2.3) {$N \times D$ ($100\text{k} \times 768$)};
+\draw[draw=accentblue, fill=blue!5, line width=0.7pt] (0.2, 0.6) rectangle (2.2, 1.9);
+\draw[draw=accentblue, fill=blue!25, line width=0.8pt] (0.4, 1.2) rectangle (1.0, 1.7);
+\node[font=\tiny\bfseries, color=accentblue] at (0.7, 1.45) {Tile};
+\draw[step=0.35cm, gray!30, very thin] (0.2, 0.6) grid (2.2, 1.9);
+
+% Multiply
+\node[font=\normalsize\bfseries] at (2.7, 1.25) {$\times$};
+
+% Matrix C^T
+\node[font=\bfseries\scriptsize] at (3.9, 2.6) {Attractors $\mathbf{C}^T$};
+\node[font=\tiny\ttfamily, color=gray!80] at (3.9, 2.3) {$D \times 2$ (Poles)};
+\draw[draw=accentteal, fill=teal!5, line width=0.7pt] (3.4, 0.6) rectangle (4.4, 1.9);
+\draw[draw=accentteal, fill=teal!25, line width=0.8pt] (3.5, 1.2) rectangle (4.3, 1.7);
+\node[font=\tiny\bfseries, color=accentteal] at (3.9, 1.45) {Tile};
+\draw[step=0.35cm, gray!30, very thin] (3.4, 0.6) grid (4.4, 1.9);
+
+% Equals
+\node[font=\normalsize\bfseries] at (4.9, 1.25) {$=$};
+
+% Matrix S
+\node[font=\bfseries\scriptsize] at (6.0, 2.6) {Cosine Projections $\mathbf{S}$};
+\node[font=\tiny\ttfamily, color=gray!80] at (6.0, 2.3) {$N \times 2$ Affinities};
+\draw[draw=accentorange, fill=orange!5, line width=0.7pt] (5.5, 0.6) rectangle (6.5, 1.9);
+\draw[draw=accentorange, fill=orange!25, line width=0.8pt] (5.6, 1.2) rectangle (6.4, 1.7);
+\node[font=\tiny\bfseries, color=accentorange] at (6.0, 1.45) {Tile};
+\draw[step=0.35cm, gray!30, very thin] (5.5, 0.6) grid (6.5, 1.9);
+
+% Reduction Arrow
+\draw[arr, color=accentpurple] (6.9, 1.25) -- (7.9, 1.25);
+\node[font=\tiny\bfseries, color=accentpurple, align=center] at (7.4, 1.65) {Vectorized\\Col-Diff};
+
+% Inversion Strip
+\node[font=\bfseries\scriptsize] at (9.4, 2.6) {Inversion Strip $\mathbf{I} \in [-1, +1]^N$};
+\node[font=\tiny\ttfamily, color=gray!80] at (9.4, 2.3) {$(S_{*, 1} - S_{*, 0}) / (|S| + \epsilon)$};
+
+\foreach \x/\val/\col in {8.3/{+0.90}/{accentteal}, 8.9/{+0.80}/{accentteal}, 9.5/{+0.85}/{accentteal}, 10.1/{-0.40}/{accentorange}, 10.7/{-0.70}/{accentorange}} {
+    \node[draw=cellborder, fill=\col!20, minimum width=0.55cm, minimum height=0.5cm, font=\tiny\bfseries] at (\x, 1.25) {\val};
+}
+
+% GPU Tensor Core Badge
+\node[draw=accentpurple, fill=white, rounded corners=3pt, anchor=west, font=\scriptsize, align=center] at (11.8, 1.25) {
+    \textbf{Tensor Core Pipeline:}\\[0.15em]
+    $100\text{k tokens} \times 768$\\[0.15em]
+    \color{accentpurple}\textbf{Executed in $< 4.2\text{ ms}$}
+};
+
+\end{tikzpicture}
+\caption{Hardware-Aligned Block and Grid Operations for Large-Scale Cultural Mechanics: Columnar Zero-Copy Vector Streaming (Tier 1), SIMD 64-Bit Phonetic Register Grid and Outer-Product Rhyme Matrix (Tier 2), and BLAS-3 GEMM Tensor Tiling for Vocabulary Inversion (Tier 3).}
 \label{fig:arch}
-\end{figure}
+\end{figure*}
 
 \subsection{Tier 1: Zero-Copy Columnar Streaming}
 Rather than materializing full text corpora in user-space heap memory, data is partitioned and serialized in Apache Arrow columnar format. We leverage vectorized query execution engines that operate directly on memory-mapped regions:
@@ -172,7 +296,7 @@ Polars (Eager In-Memory)                             &  7.2 GB & 11.4 s & 0.41 s
 \label{tab:memory}
 \end{table}
 
-Our zero-copy streaming architecture reduces peak resident memory consumption by **$98.1\%$** (from 18.4\,GB down to 340\,MB) while achieving sub-tenth-second time-to-first-result by avoiding upfront heap materialization.
+Our zero-copy streaming architecture reduces peak resident memory consumption by \textbf{98.1\%} (from 18.4\,GB down to 340\,MB) while achieving sub-tenth-second time-to-first-result by avoiding upfront heap materialization.
 
 \subsection{Distributed Scaling Efficiency}
 Using a distributed task graph (Map-Reduce DAG), we partitioned 20 years of diachronic text into month-level sliding windows. The scaling efficiency across $P \in \{1, 2, 4, 8, 16, 32\}$ worker processes yielded an empirical scaling factor of $\eta = 0.94$, demonstrating near-ideal linear speedup.
