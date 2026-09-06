@@ -1,9 +1,10 @@
-# Cultural Mechanics: Lecture 01
+# Semantic Inversion: Lecture 02
 **SEMANTIC MECHANICS PROJECT · MATHEMATICAL LINGUISTICS GROUP**
 
 ---
 
-## Lecture 01: Semantic Inversion, Phonetic Proof-of-Work, and High-Performance Cultural Mechanics
+## Lecture 02: Semantic Inversion
+### Phonetic Proof-of-Work and High-Performance Cultural Mechanics
 
 - **Course:** Cultural Mechanics
 - **Initiative:** The Semantic Mechanics Project
@@ -15,21 +16,26 @@
   - Ferdinand, Vanessa, Kirby, Simon, & Smith, Kenny (2019). "The cognitive roots of regularization in language." *Cognition*.
   - Hurston, Zora Neale (1934). "Characteristics of Negro Expression."
   - Bourdieu, Pierre (1991). *Language and Symbolic Power*.
-- **Compiled Lecture Monograph PDF:** [`lecture_01_cultural_mechanics.pdf`](file:///Users/erickoduniyi/Desktop/mlg/semantic-mechanics/lectures/lecture_01_cultural_mechanics.pdf)
+- **Compiled Lecture Monograph PDF:** [`lecture_02_cultural_mechanics.pdf`](file:///Users/erickoduniyi/Desktop/mlg/semantic-mechanics/lectures/lecture_02_cultural_mechanics.pdf)
+- **Companion Monograph:** [`lecture_01_representational_genealogy.pdf`](file:///Users/erickoduniyi/Desktop/mlg/semantic-mechanics/lectures/lecture_01_representational_genealogy.pdf)
 
 ---
 
 ## 1. The Motivating Paradox: Why Standard NLP Fails on Culture
 
-Welcome to *Cultural Mechanics*. Developed under the broader **Semantic Mechanics Project**, this course brings together computer systems engineering, computational cognitive science, and sociolinguistics to treat human culture not as an archival museum of static strings, but as an **adaptive, non-equilibrium complex information system**.
+Welcome to *Lecture 02: Cultural Mechanics*. Following our investigation in Lecture 01 of **Representational Genealogy**—how formal notations, compilers, and syntactic formalisms are shaped by institutional monopolies and technological transaction costs—we now turn to the living vernacular frontier. Developed under the broader **Semantic Mechanics Project**, this lecture brings together computer systems engineering, computational cognitive science, and sociolinguistics to treat living culture not as an archival museum of static strings, but as an **adaptive, non-equilibrium complex information system**.
 
 Modern NLP and large language models (LLMs) operate on static semantic tables. When exposed to living vernacular culture, they suffer a fundamental epistemic breakdown:
 
 > **Empirical Valence Discrepancy in Contemporary NLP:**
 > - **Sentence A (Institutional Clinical Register):** *"The patient exhibited an ill condition and bad symptoms."*  
->   $ightarrow$ **Model Output:** $\hat{v} = -0.85$ $\mid$ **Ground Truth:** $v^* = -0.85$ $ightarrow$ **Residual Error:** $\Delta = |\hat{v} - v^*| = 0.00$
+>   $
+ightarrow$ **Model Output:** $\hat{v} = -0.85$ $\mid$ **Ground Truth:** $v^* = -0.85$ $
+ightarrow$ **Residual Error:** $\Delta = |\hat{v} - v^*| = 0.00$
 > - **Sentence B (Vernacular Poetic Register):** *"Her lyricism is ill, the baseline is bad, that whole record is dope."*  
->   $ightarrow$ **Model Output:** $\hat{v} = -0.88$ $\mid$ **Ground Truth:** $v^* = +1.00$ $ightarrow$ **Residual Error:** $\Delta = |\hat{v} - v^*| = 1.88$
+>   $
+ightarrow$ **Model Output:** $\hat{v} = -0.88$ $\mid$ **Ground Truth:** $v^* = +1.00$ $
+ightarrow$ **Residual Error:** $\Delta = |\hat{v} - v^*| = 1.88$
 
 To an automated model matching tokens against static tables, Sentences A and B appear indistinguishable in polarity ($\hat{v} pprox -0.85$ vs. $-0.88$). For Sentence A, this prediction is accurate ($\Delta = 0.00$). But for Sentence B, any competent participant in the African American expressive tradition or global hip-hop culture decodes the **highest order of virtuosic mastery, technical poise, and aesthetic triumph** ($v^* = +1.00$). The model incurs a **maximal polarity inversion error** ($\Delta = 1.88$, a full sign flip).
 
@@ -153,3 +159,14 @@ Companion computational notebook:
 1. Stream 100k diachronic Parquet tokens via zero-copy DuckDB pointer windows and inspect RSS resident memory.
 2. Implement the 64-bit syllable bitmask $\mathbf{b}_\sigma$ and benchmark rhyme throughput against Python regex.
 3. Extract diachronic phase space velocity vectors $\dot{\mathbf{I}}(t)$ for five target tokens from 1980 to 2025 and plot their phase portraits.
+
+---
+
+## References
+
+1. Smitherman, G. (1977). *Talkin and Testifyin: The Language of Black America*. Houghton Mifflin.
+2. Rose, T. (1994). *Black Noise: Rap Music and Black Culture in Contemporary America*. Wesleyan University Press.
+3. Ferdinand, V., Kirby, S., & Smith, K. (2019). The cognitive roots of regularization in language. *Cognition*, 184, 53–65.
+4. Hurston, Z. N. (1934). Characteristics of Negro Expression. In N. Cunard (Ed.), *Negro: An Anthology*.
+5. Gates, H. L. Jr. (1988). *The Signifying Monkey: A Theory of African-American Literary Criticism*. Oxford University Press.
+6. Bourdieu, P. (1991). *Language and Symbolic Power*. Harvard University Press.

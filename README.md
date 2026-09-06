@@ -94,9 +94,12 @@ jupyter lab notebooks/r/
 ```
 semantic-mechanics/
 ├── lectures/
-│   ├── lecture_01_cultural_mechanics.tex   # Monograph: Cultural Mechanics (6 pages)
-│   ├── lecture_01_cultural_mechanics.pdf   # Compiled PDF monograph
-│   └── lecture_01_cultural_mechanics.md    # Companion lecture notes & syllabus
+│   ├── lecture_01_representational_genealogy.pdf  # Monograph 01: Politics of Notation (6 pp)
+│   ├── lecture_01_representational_genealogy.tex  # LaTeX source for Lecture 01
+│   ├── lecture_01_representational_genealogy.md   # Notes, syllabus & environment setup
+│   ├── lecture_02_cultural_mechanics.pdf          # Monograph 02: Cultural Mechanics (6 pp)
+│   ├── lecture_02_cultural_mechanics.tex          # LaTeX source for Lecture 02
+│   └── lecture_02_cultural_mechanics.md           # Notes, syllabus & phonetic PoW
 ├── models/
 │   ├── lifecycle.py                        # Simulation of token inflation & inversion
 │   └── case_studies.json                   # Structured case studies in math & vernaculars
