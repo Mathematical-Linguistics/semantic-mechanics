@@ -153,37 +153,37 @@ where $s$ is the arc-length parameter along the $k$-th stroke, $\kappa(s) = \|\f
 
 \begin{figure}[htbp]
 \centering
-\begin{tikzpicture}[every node/.style={font=\small\sffamily}, scale=0.85]
+\begin{tikzpicture}[every node/.style={font=\small\sffamily}, scale=0.86]
     % Source Sequence Box
-    \draw[fill=calloutbg, draw=primaryblue, line width=1.1pt, rounded corners=12pt] (-7.6,-1.35) rectangle (-2.8,1.35);
-    \node[color=primaryblue, font=\bfseries\small] at (-5.2, 0.95) {Source Sequence $\Sigma_A^*$};
-    \node[font=\footnotesize] at (-5.2, 0.4) {String: $\mathbf{s}_A = (s_1, \dots, s_n)$};
-    \node[font=\scriptsize, color=darkslate!80] at (-5.2, -0.15) {Alphabet Cardinality $|\Sigma_A| = M_A$};
-    \node[font=\scriptsize, color=accentindigo] at (-5.2, -0.65) {Entropy: $H(\Sigma_A) = -\sum p_i \log_2 p_i$};
+    \draw[fill=calloutbg, draw=primaryblue, line width=1.1pt, rounded corners=10pt] (-7.8,-1.55) rectangle (-3.1,1.55);
+    \node[color=primaryblue, font=\bfseries\small] at (-5.45, 0.95) {Source Sequence $\Sigma_A^*$};
+    \node[font=\footnotesize] at (-5.45, 0.35) {String: $\mathbf{s}_A = (s_1, \dots, s_n)$};
+    \node[font=\scriptsize, color=darkslate!80] at (-5.45, -0.25) {Alphabet Cardinality $|\Sigma_A| = M_A$};
+    \node[font=\scriptsize, color=accentindigo] at (-5.45, -0.85) {Entropy: $H(\Sigma_A) = -\sum p_i \log_2 p_i$};
 
-    % Transformation Engine Middle
-    \draw[fill=warmbg, draw=accentteal, line width=1.2pt, rounded corners=12pt] (-1.6,-1.35) rectangle (1.6,1.35);
-    \node[color=accentteal, font=\bfseries\small] at (0, 0.95) {Sequence Engine $\mathcal{E}$};
-    \node[font=\scriptsize] at (0, 0.5) {Mechanical Work $\mathcal{W}_{\text{ext}}$};
-    \node[font=\tiny, color=darkslate] at (0, 0.1) {Stroke Deformation};
-    \node[font=\tiny, color=darkslate!75] at (0, -0.15) {$\int \kappa(s)^2 ds$};
-    \draw[->, line width=1.2pt, color=red!75!black, decorate, decoration={snake, amplitude=1.8pt, segment length=5pt}] (0, -0.32) -- (0, -0.85);
-    \node[below, font=\tiny, color=red!75!black] at (0, -0.87) {Heat $\mathcal{Q} \ge k_B T \ln 2 \cdot \Delta H$};
+    % Transformation Engine Middle Box
+    \draw[fill=warmbg, draw=accentteal, line width=1.2pt, rounded corners=10pt] (-2.2,-1.55) rectangle (2.2,1.55);
+    \node[color=accentteal, font=\bfseries\small] at (0, 1.05) {Sequence Engine $\mathcal{E}$};
+    \node[font=\footnotesize] at (0, 0.60) {Mechanical Work $\mathcal{W}_{\text{ext}}$};
+    \node[font=\scriptsize, color=darkslate] at (0, 0.20) {Stroke Deformation};
+    \node[font=\footnotesize, color=darkslate!85] at (0, -0.10) {$\int \kappa(s)^2\,ds$};
+    \draw[->, line width=1.1pt, color=red!75!black, decorate, decoration={snake, amplitude=1.5pt, segment length=5pt}] (0, -0.30) -- (0, -0.72);
+    \node[font=\scriptsize\bfseries, color=red!75!black] at (0, -1.02) {Heat $\mathcal{Q} \ge k_B T \ln 2 \cdot \Delta H$};
 
     % Inter-box Arrows
-    \draw[->, line width=1.3pt, color=primaryblue] (-2.6, 0.1) -- (-1.8, 0.1) node[midway, above, font=\scriptsize] {$\mathbf{s}_A$};
-    \draw[->, line width=1.3pt, color=primaryblue] (1.8, 0.1) -- (2.6, 0.1) node[midway, above, font=\scriptsize] {$\mathbf{s}_B$};
+    \draw[->, line width=1.3pt, color=primaryblue] (-3.0, 0.0) -- (-2.3, 0.0) node[midway, above=1pt, font=\scriptsize\bfseries] {$\mathbf{s}_A$};
+    \draw[->, line width=1.3pt, color=primaryblue] (2.3, 0.0) -- (3.0, 0.0) node[midway, above=1pt, font=\scriptsize\bfseries] {$\mathbf{s}_B$};
 
     % Target Sequence Box
-    \draw[fill=calloutbg, draw=primaryblue, line width=1.1pt, rounded corners=12pt] (2.8,-1.35) rectangle (7.6,1.35);
-    \node[color=primaryblue, font=\bfseries\small] at (5.2, 0.95) {Target Sequence $\Sigma_B^*$};
-    \node[font=\footnotesize] at (5.2, 0.4) {String: $\mathbf{s}_B = (s_1^\prime, \dots, s_m^\prime)$};
-    \node[font=\scriptsize, color=darkslate!80] at (5.2, -0.15) {Alphabet Cardinality $|\Sigma_B| = M_B$};
-    \node[font=\scriptsize, color=accentindigo] at (5.2, -0.65) {Entropy: $H(\Sigma_B) = -\sum q_j \log_2 q_j$};
+    \draw[fill=calloutbg, draw=primaryblue, line width=1.1pt, rounded corners=10pt] (3.1,-1.55) rectangle (7.8,1.55);
+    \node[color=primaryblue, font=\bfseries\small] at (5.45, 0.95) {Target Sequence $\Sigma_B^*$};
+    \node[font=\footnotesize] at (5.45, 0.35) {String: $\mathbf{s}_B = (s_1^\prime, \dots, s_m^\prime)$};
+    \node[font=\scriptsize, color=darkslate!80] at (5.45, -0.25) {Alphabet Cardinality $|\Sigma_B| = M_B$};
+    \node[font=\scriptsize, color=accentindigo] at (5.45, -0.85) {Entropy: $H(\Sigma_B) = -\sum q_j \log_2 q_j$};
 
     % Bottom Invariant Box
-    \node[draw=boxborder, fill=white, rounded corners=4pt, line width=0.8pt, inner sep=4pt] at (0,-2.05) {
-        \footnotesize{\bfseries Jarzynski Identity:} $\left\langle \exp\left(-\frac{\mathcal{W}}{k_B T}\right) \right\rangle = \exp\left(-\frac{\Delta F}{k_B T}\right) \quad \text{where } \Delta F = F(\Sigma_B) - F(\Sigma_A)$
+    \node[draw=boxborder, fill=white, rounded corners=4pt, line width=0.8pt, inner sep=5pt] at (0,-2.25) {
+        \footnotesize\textbf{Jarzynski Identity:}\; $\left\langle \exp\left(-\frac{\mathcal{W}}{k_B T}\right) \right\rangle = \exp\left(-\frac{\Delta F}{k_B T}\right) \quad \text{where } \Delta F = F(\Sigma_B) - F(\Sigma_A)$
     };
 \end{tikzpicture}
 \caption{The Thermodynamic Cycle of Sequence Transformation: processing symbolic strings from alphabet $\Sigma_A$ to alphabet $\Sigma_B$ expends stroke curvature energy $\int \kappa(s)^2 ds$, performs work $\mathcal{W}$, and dissipates Landauer heat $\mathcal{Q}_{\text{diss}}$ into the physical substrate.}
