@@ -114,7 +114,7 @@
 \vspace{0.1em}
 \hrule height 1.2pt \vspace{0.7em}
 
-\section{The Translation Problem: Invariance Across Linguistic Substrates}
+\section{The Translation Problem}
 
 Welcome to \textit{Lecture 03: Formal Translation}. In Lecture 01, we established that formal representations are economic technologies shaped by institutional subsidies and physical media. In Lecture 02, we analyzed how communities execute algebraic sign inversions ($f \mapsto f^{-1}$) to protect symbolic autonomy. We now turn to a foundational question uniting pure mathematics, theoretical linguistics, and high-performance computing: \textbf{what does it mean to translate information between distinct formal or natural substrates?}
 
@@ -208,7 +208,7 @@ d_{\mathbb{H}}(u, v) = \operatorname{arcosh}\left(1 + 2 \frac{\|u - v\|^2}{(1 - 
 \end{equation}
 By embedding source and target syntactic trees into hyperbolic Riemannian manifolds, translation maps tree hierarchies across languages with minimal distortion ($\epsilon \to 0$), preserving compositional dependencies without dimensional bloat.
 
-\section{Continuous Transport Across Languages: From Procrustes to Optimal Transport}
+\section{Continuous Transport Across Languages}
 
 \subsection{The Orthogonal Procrustes Formulation}
 In computational linguistics, bilingual lexicon induction and cross-lingual transfer can be framed as an alignment of empirical vector clouds. Let $X \in \mathbb{R}^{n \times d}$ and $Y \in \mathbb{R}^{n \times d}$ represent embedding matrices for $n$ corresponding anchor words in the source and target languages, respectively.
@@ -252,7 +252,7 @@ Q = H_{\text{tgt}} W_Q, \quad K = H_{\text{src}} W_K, \quad V = H_{\text{src}} W
 \end{equation}
 Here, the attention matrix $A = \operatorname{softmax}(Q K^T / \sqrt{d_k})$ functions as an empirical, data-dependent coupling matrix $\pi_{ij}$ dynamically routing probability mass from source positions to target positions in real time.
 
-\section{Mathematical Correspondences: Category-Theoretic Translation}
+\section{Mathematical Correspondences}
 
 \subsection{Functors as Formal Translation Systems}
 Translation is not limited to natural languages; it is the fundamental mechanism connecting disparate formal languages in mathematics. In category theory (Mac Lane, 1971), translation is formalized as a \textbf{functor} between categories.
@@ -290,14 +290,14 @@ Proof Normalization & Program Reduction ($\beta$-reduction) & Morphism Simplific
 
 Under Curry-Howard-Lambek, writing a program is mathematically identical to constructing a logical proof, which is in turn identical to defining a morphism in a category. Translation between these domains is lossless and invertible.
 
-\subsection{Adjunctions and Galois Connections: The Limits of Exact Translation}
+\subsection{Adjunctions and Galois Connections}
 When exact isomorphism is unattainable, category theory provides \textbf{adjunctions} ($F \dashv G$) to formalize optimal approximation. A functor $F: \mathcal{C} \to \mathcal{D}$ is left adjoint to $G: \mathcal{D} \to \mathcal{C}$ if there exists a natural isomorphism of Hom-sets:
 \begin{equation}
 \operatorname{Hom}_{\mathcal{D}}\big(F(A), B\big) \cong \operatorname{Hom}_{\mathcal{C}}\big(A, G(B)\big)
 \end{equation}
 In partially ordered sets, adjunctions specialize to \textbf{Galois connections}. Adjunctions formalize the reality that while translation cannot preserve every nuanced inflection of the source text, it can construct the closest universal approximation within the target language.
 
-\section{The Computational Laboratory: Implementing Manifold Alignment}
+\section{The Computational Laboratory}
 
 The computational laboratory for this lecture implements empirical cross-lingual manifold alignment using Singular Value Decomposition on GPU and CPU tensors. Listing~\ref{lst:procrustes} implements the Orthogonal Procrustes alignment algorithm and evaluates geometric distortion.
 
@@ -339,7 +339,7 @@ def evaluate_manifold_distortion(X: torch.Tensor, Y: torch.Tensor, W: torch.Tens
 \end{enumerate}
 }
 
-\section{Laboratory Exercise: Hands-On in Jupyter}
+\section{Laboratory Exercise}
 For this week's laboratory assignment, clone and execute the companion computational notebook:
 \begin{center}
     \texttt{notebooks/python/07\_cross\_lingual\_manifold\_translation.ipynb}

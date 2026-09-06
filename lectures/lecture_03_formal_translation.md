@@ -24,7 +24,7 @@
 
 ---
 
-## 1. The Translation Problem: Invariance Across Linguistic Substrates
+## 1. The Translation Problem
 
 Welcome to *Lecture 03: Formal Translation*. In Lecture 01, we established that formal representations are economic technologies shaped by institutional subsidies and physical media. In Lecture 02, we analyzed how living communities execute algebraic sign inversions ($f \mapsto f^{-1}$) to preserve symbolic autonomy against external appropriation.
 
@@ -96,7 +96,7 @@ By embedding source and target syntactic trees into hyperbolic Riemannian manifo
 
 ---
 
-## 3. Continuous Transport Across Languages: From Procrustes to Optimal Transport
+## 3. Continuous Transport Across Languages
 
 ### 3.1 The Orthogonal Procrustes Formulation
 In computational linguistics, bilingual lexicon induction and cross-lingual transfer can be framed as an alignment of empirical vector clouds. Let $X \in \mathbb{R}^{n \times d}$ and $Y \in \mathbb{R}^{n \times d}$ represent embedding matrices for $n$ corresponding anchor words in the source and target languages, respectively.
@@ -139,7 +139,7 @@ Here, the attention matrix $A = \text{softmax}(Q K^T / \sqrt{d_k})$ functions as
 
 ---
 
-## 4. Mathematical Correspondences: Category-Theoretic Translation
+## 4. Mathematical Correspondences
 
 ### 4.1 Functors as Formal Translation Systems
 Translation is not limited to natural languages; it is the fundamental mechanism connecting disparate formal languages in mathematics. In category theory (Mac Lane, 1971), translation is formalized as a **functor** between categories.
@@ -166,7 +166,7 @@ $$\text{\bfseries Intuitionistic Logic} \quad \longleftrightarrow \quad \text{\b
 
 Under Curry-Howard-Lambek, writing a program is mathematically identical to constructing a logical proof, which is in turn identical to defining a morphism in a category. Translation between these domains is lossless and invertible.
 
-### 4.3 Adjunctions and Galois Connections: The Limits of Exact Translation
+### 4.3 Adjunctions and Galois Connections
 When exact isomorphism is unattainable, category theory provides **adjunctions** ($F \dashv G$) to formalize optimal approximation. A functor $F: \mathcal{C} \to \mathcal{D}$ is left adjoint to $G: \mathcal{D} \to \mathcal{C}$ if there exists a natural isomorphism of Hom-sets:
 
 $$\text{Hom}_{\mathcal{D}}\big(F(A), B\big) \cong \text{Hom}_{\mathcal{C}}\big(A, G(B)\big)$$
@@ -175,7 +175,7 @@ In partially ordered sets, adjunctions specialize to **Galois connections**. Adj
 
 ---
 
-## 5. The Computational Laboratory: Implementing Manifold Alignment
+## 5. The Computational Laboratory
 
 The computational laboratory for this lecture implements empirical cross-lingual manifold alignment using Singular Value Decomposition on GPU and CPU tensors:
 
@@ -229,7 +229,7 @@ def evaluate_manifold_distortion(X: torch.Tensor, Y: torch.Tensor, W: torch.Tens
 
 ---
 
-## 7. Laboratory Exercise: Hands-On in Jupyter
+## 7. Laboratory Exercise
 
 For this week's laboratory assignment, clone and execute the companion computational notebook:
 
