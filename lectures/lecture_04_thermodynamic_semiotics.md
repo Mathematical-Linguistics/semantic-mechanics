@@ -72,6 +72,9 @@ Topologically, character sets exhibit sharp variations in Euler characteristic $
 - **Genus 1 (Monotoroidal Glyphs):** Single enclosed loop ($\chi = 0$), such as `A, D, O, P, R, Q`. In mechanical punch-cutting, these require internal counter-punches and high manufacturing pressure.
 - **Genus 2 (Bitoroidal Glyphs):** Double enclosed loops ($\chi = -1$), such as `B` or `8`.
 
+![Multi-Script Glyph Topology and Differential Curvature Decomposition](figures/fig_glyph_comparative_topology.png)
+*Figure 2: Multi-Script Glyph Topology and Differential Curvature Decomposition: comparative boundary discretization and topological analysis of Latin (phonetic "R"), Arabic (cursive abjad "Wāw"), Hangul (featural "Hieut"), and Hanzi (logographic "Yǒng"). Discrete sample points along each vector boundary trace arc-length parameterization $s$. Phonetic systems minimize stroke work $\mathcal{E}_{\text{stroke}}$ to accelerate physical production, while logographic scripts maximize single-character informational payload $H(s)$ through complex differential curvature.*
+
 ### 2.2 Visual Classification Entropy and Perceptual Foveation
 When human readers or computer vision models inspect an orthographic text, the visual sensor executes rapid ballistic saccades followed by fixed foveations. The energetic cost of identifying a glyph $s \in \Sigma$ is bounded by the **perceptual classification entropy**:
 

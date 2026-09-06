@@ -1,6 +1,6 @@
 \documentclass[11pt,letterpaper]{article}
 
-\usepackage[margin=0.90in,top=0.92in,bottom=0.92in]{geometry}
+\usepackage[margin=0.88in,top=0.86in,bottom=0.86in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{newpxtext,newpxmath} % Palatino typography
@@ -61,7 +61,7 @@
 \newcommand{\calloutbox}[2]{%
 \vspace{0.35em}\noindent
 \begin{tikzpicture}
-\node[draw=primaryblue, fill=calloutbg, rounded corners=4pt, line width=0.9pt, text width=\dimexpr\linewidth-24pt\relax, inner sep=7.5pt] {
+\node[draw=primaryblue, fill=calloutbg, rounded corners=4pt, line width=0.9pt, text width=\dimexpr\linewidth-24pt\relax, inner sep=6pt] {
     {\sffamily\bfseries\color{primaryblue}#1}\par\vspace{0.25em}{\color{boxborder}\hrule height 0.5pt}\vspace{0.45em}
     {\small\color{darkslate}#2}
 };
@@ -71,7 +71,7 @@
 \newcommand{\socraticbox}[2]{%
 \vspace{0.35em}\noindent
 \begin{tikzpicture}
-\node[draw=accentindigo, fill=warmbg, rounded corners=4pt, line width=0.9pt, text width=\dimexpr\linewidth-24pt\relax, inner sep=7.5pt] {
+\node[draw=accentindigo, fill=warmbg, rounded corners=4pt, line width=0.9pt, text width=\dimexpr\linewidth-24pt\relax, inner sep=6pt] {
     {\sffamily\bfseries\color{accentindigo}#1}\par\vspace{0.25em}{\color{boxborder}\hrule height 0.5pt}\vspace{0.45em}
     {\small\color{darkslate}#2}
 };
@@ -153,7 +153,7 @@ where $s$ is the arc-length parameter along the $k$-th stroke, $\kappa(s) = \|\f
 
 \begin{figure}[htbp]
 \centering
-\begin{tikzpicture}[every node/.style={font=\small\sffamily}, scale=0.86]
+\begin{tikzpicture}[every node/.style={font=\small\sffamily}, scale=0.83]
     % Source Sequence Box
     \draw[fill=calloutbg, draw=primaryblue, line width=1.1pt, rounded corners=10pt] (-7.8,-1.55) rectangle (-3.1,1.55);
     \node[color=primaryblue, font=\bfseries\small] at (-5.45, 0.95) {Source Sequence $\Sigma_A^*$};
@@ -196,6 +196,13 @@ Topologically, character sets exhibit sharp variations in Euler characteristic $
     \item \textbf{Genus 1 (Monotoroidal Glyphs):} Single enclosed loop ($\chi = 0$), such as \texttt{A, D, O, P, R, Q}. In mechanical punch-cutting, these require internal counter-punches and high manufacturing pressure.
     \item \textbf{Genus 2 (Bitoroidal Glyphs):} Double enclosed loops ($\chi = -1$), such as \texttt{B} or \texttt{8}.
 \end{itemize}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.93\textwidth]{figures/fig_glyph_comparative_topology.png}
+\caption{Multi-Script Glyph Topology and Differential Curvature Decomposition: comparative boundary discretization and topological analysis of Latin, Arabic, Hangul, and Hanzi scripts. Discrete sample points along each vector boundary trace arc-length parameterization $s$. Phonetic systems minimize stroke work $\mathcal{E}_{\text{stroke}}$ to accelerate physical production, while logographic scripts maximize single-character informational payload $H(s)$ through complex differential curvature.}
+\label{fig:glyph_topology}
+\end{figure}
 
 \subsection{Visual Classification Entropy and Perceptual Foveation}
 When human readers or computer vision models inspect an orthographic text, the visual sensor executes rapid ballistic saccades followed by fixed foveations. The energetic cost of identifying a glyph $s \in \Sigma$ is bounded by the \textbf{perceptual classification entropy}:
@@ -308,49 +315,34 @@ As Table~\ref{tab:memory_energy} proves, fetching symbolic tokens across the DRA
 
 \section{The Computational Laboratory}
 
-The computational laboratory for this lecture implements physical stroke curvature evaluation and Landauer dissipation estimation for sequence transformations:
+The computational laboratory implements numerical stroke curvature evaluation and theoretical Landauer dissipation limits:
 
-\begin{lstlisting}[language=Python, caption={Curvature energy and Landauer dissipation in sequence translation.}, label={lst:thermo}]
+\begin{lstlisting}[language=Python, basicstyle=\ttfamily\scriptsize, caption={Curvature energy and Landauer dissipation in sequence translation.}, label={lst:thermo}]
 import numpy as np
 
 def compute_stroke_curvature_energy(points: np.ndarray, alpha: float = 1.0, beta: float = 2.0) -> float:
-    """
-    Computes physical stroke bending energy:
-        E = integral (alpha + beta * kappa^2) ds
-    for a discretized glyph contour (N x 2).
-    """
-    # 1. Compute first-order differences (tangent arc length)
-    dx = np.gradient(points[:, 0])
-    dy = np.gradient(points[:, 1])
+    # 1. First-order tangent arc length ds
+    dx, dy = np.gradient(points[:, 0]), np.gradient(points[:, 1])
     ds = np.sqrt(dx**2 + dy**2) + 1e-8
-
-    # 2. Compute second-order differences (curvature acceleration)
-    ddx = np.gradient(dx)
-    ddy = np.gradient(dy)
-    
-    # 3. Signed curvature kappa = |dx*ddy - dy*ddx| / (dx^2 + dy^2)^(3/2)
+    # 2. Second-order curvature acceleration
+    ddx, ddy = np.gradient(dx), np.gradient(dy)
+    # 3. Signed curvature kappa and bending action
     curvature = np.abs(dx * ddy - dy * ddx) / (ds**3)
-    energy = np.sum((alpha + beta * (curvature**2)) * ds)
-    return float(energy)
+    return float(np.sum((alpha + beta * (curvature**2)) * ds))
 
 def landauer_dissipation(entropy_erased_bits: float, temp_kelvin: float = 300.0) -> float:
-    """
-    Computes minimum theoretical thermodynamic dissipation:
-        Q >= k_B * T * ln(2) * Delta_H (Joules)
-    """
-    k_B = 1.380649e-23  # Boltzmann constant in J/K
-    q_min = k_B * temp_kelvin * np.log(2) * entropy_erased_bits
-    return float(q_min)
+    k_B = 1.380649e-23  # Boltzmann constant (J/K)
+    return float(k_B * temp_kelvin * np.log(2) * entropy_erased_bits)
 \end{lstlisting}
 
 \section{Seminar Discussion \& Socratic Prompts}
 
 \socraticbox{Seminar Questions for Class Discussion}{%
-\begin{enumerate}[noitemsep,topsep=1.5pt]
-    \item \textbf{Thermodynamic Efficiency of Natural Alphabets:} Why did Phoenician, Greek, and Latin alphabets stabilize at roughly 20--30 phonetic symbols rather than expanding to 10,000 ideograms or collapsing to a 2-symbol binary alphabet? What thermodynamic trade-off between stroke manufacturing work and sequence length does this strike?
-    \item \textbf{Reversible Computing and Lossless Translation:} If translation between two formal languages is a category-theoretic isomorphism ($F \circ G \cong \mathbf{1}$), can it theoretically be implemented on Bennett-style logically reversible hardware with zero Landauer dissipation?
-    \item \textbf{The Energy Cost of Hallucination:} In large language models, generating divergent or hallucinated tokens increases sequence entropy. How does this entropy generation manifest in physical power draw across GPU clusters?
-    \item \textbf{Typographic Wear and Historical Media:} How did the physical wear of lead type and mechanical punch-cutting historically constrain the evolution of European font designs (e.g., Blackletter vs. Antiqua)?
+\begin{enumerate}[noitemsep,topsep=1pt,itemsep=1.5pt]
+    \item \textbf{Thermodynamic Efficiency of Natural Alphabets:} Why did Phoenician, Greek, and Latin stabilize at 20--30 phonetic symbols rather than 10,000 ideograms? What thermodynamic trade-off between stroke work and sequence length does this optimize?
+    \item \textbf{Reversible Computing and Lossless Translation:} If formal translation is a category-theoretic isomorphism ($F \circ G \cong \mathbf{1}$), can it be implemented on reversible hardware with zero Landauer heat dissipation?
+    \item \textbf{The Energy Cost of Hallucination:} In large language models, generating divergent tokens increases sequence entropy. How does this entropy generation manifest in physical power draw across GPU clusters?
+    \item \textbf{Typographic Wear and Historical Media:} How did the physical wear of lead type and mechanical punch-cutting constrain the evolution of European letterforms (e.g., Blackletter vs. Antiqua)?
 \end{enumerate}
 }
 
@@ -368,7 +360,8 @@ For this week's laboratory assignment, clone and execute the companion computati
 \end{enumerate}
 
 \subsection*{References}
-\begin{enumerate}[label={[\arabic*]},noitemsep,topsep=1.5pt]
+{\footnotesize
+\begin{enumerate}[label={[\arabic*]},noitemsep,topsep=1pt,itemsep=1pt]
     \item Bennett, C. H. (1973). Logical reversibility of computation. \textit{IBM Journal of Research and Development}, 17(6), 525--532.
     \item Bringhurst, R. (1992). \textit{The Elements of Typographic Style}. Hartley \& Marks.
     \item Friston, K. (2010). The free-energy principle: a unified brain theory? \textit{Nature Reviews Neuroscience}, 11(2), 127--138.
@@ -377,6 +370,7 @@ For this week's laboratory assignment, clone and execute the companion computati
     \item Landauer, R. (1961). Irreversibility and heat generation in the computing process. \textit{IBM Journal of Research and Development}, 5(3), 183--191.
     \item Shannon, C. E. (1948). A mathematical theory of communication. \textit{Bell System Technical Journal}, 27(3), 379--423.
 \end{enumerate}
+}
 
 \vspace{0.3em}
 \hrule height 0.4pt \vspace{0.3em}
