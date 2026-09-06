@@ -39,9 +39,9 @@ where:
 - $C_{\text{print}}$ is reproduction and compiler friction.
 - $C_{\text{cog}}$ is visual-cognitive parsing overhead.
 - $C_{\text{coord}}$ is network switching cost across practitioners.
-- $\mathcal{S}_{\text{inst}}$ is the capital subsidy supplied by sovereign institutions (academies, defense agencies, textbook cartels).
+- $\mathcal{S}_{\text{inst}}$ is the capital subsidy supplied by sovereign institutions (academies, defense agencies, standardized educational publishers).
 
-When institutional inertia $\mathcal{S}_{\text{inst}}$ dominates, formalisms exhibit **path-dependent technological lock-in** (Arthur, 1989). A sub-optimal notation can monopolize an entire civilization's intellectual output for centuries, imposing staggering cognitive deadweight loss upon generations of learners.
+When institutional inertia $\mathcal{S}_{\text{inst}}$ dominates, formalisms exhibit **path-dependent technological lock-in** (Arthur, 1989). A sub-optimal notation can monopolize an entire civilization's intellectual output for centuries, introducing sustained cognitive friction and adoption overhead across generations of practitioners.
 
 ---
 
@@ -138,8 +138,8 @@ print(f"Loaded {len(df_extinction)} extinction epochs, {len(df_vocab)} authors, 
 | $(P, \le, \cdot, 1, (-)^l, (-)^r)$ | Partially ordered monoid with left/right adjoint inverses | Lambek pregroup grammar |
 | $\rho_{\text{pragmatic}}$ | Pragmatic Density Index (Gatesian double-voiced ratio) | Information-theoretic cryptographic hardness |
 | $\text{MSRD}$ | Multi-Syllabic Rhyme Density ($\frac{\text{Assonant Rhyme Morae}}{\text{Total Syllables}}$) | Phonetic Proof-of-Work |
-| $\theta \in [0, 1]$ | Mainstream / commercial institutional saturation | Slang debasement parameter |
-| $\theta^* \approx 0.35$ | The Cringe Cliff (critical threshold where $\frac{\partial U}{\partial \theta} < 0$) | Vernacular abandonment phase |
+| $\theta \in [0, 1]$ | Mainstream / commercial institutional saturation | Diffusion saturation parameter |
+| $\theta^* \approx 0.35$ | Saturation Inflection Point (critical threshold where $\frac{\partial U}{\partial \theta} < 0$) | Vernacular transition phase |
 
 ---
 

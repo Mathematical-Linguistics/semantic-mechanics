@@ -25,7 +25,7 @@
 
 Welcome to *Lecture 02: Semantic Inversion*. Following our investigation in Lecture 01 of **Representational Genealogy**—how formal notations, compilers, and syntactic formalisms are shaped by institutional monopolies and technological transaction costs—we now turn to the living vernacular frontier. Developed under the broader **Semantic Mechanics Project**, this lecture brings together computer systems engineering, computational cognitive science, and sociolinguistics to treat living culture not as an archival museum of static strings, but as an **adaptive, non-equilibrium complex information system**.
 
-Modern NLP and large language models (LLMs) operate on static semantic tables. When exposed to living vernacular culture, they suffer a fundamental epistemic breakdown:
+Modern NLP and large language models (LLMs) operate on static semantic tables. When exposed to living vernacular culture, they reveal structural limitations in static modeling assumptions:
 
 > **Empirical Valence Discrepancy in Contemporary NLP:**
 > - **Sentence A (Institutional Clinical Register):** *"The patient exhibited an ill condition and bad symptoms."*  
@@ -83,7 +83,7 @@ When transmission bandwidth is constrained, the human mind compresses chaotic va
 ### Tricia Rose & Phonetic Proof-of-Work (PoW)
 In *Black Noise* (1994), **Dr. Tricia Rose** identified the foundational tripartite axes of hip-hop: **flow, layering, and rhythmic rupture**.
 When master lyricists (Jean Grae, Rakim, Lauryn Hill, Sa-Roc, MF DOOM) construct complex multi-syllabic rhyme schemes, they solve multi-constraint optimization problems under tight metrical syncopation:
-- **Phonetic Proof-of-Work (PoW):** An impostor cannot counterfeit a multi-rhyme cadence across four bars of 16th notes; it requires verifiable cognitive energy and articulatory training.
+- **Phonetic Proof-of-Work (PoW):** A multi-rhyme cadence cannot be generated without substantial computational cost across four bars of 16th notes; it requires verifiable cognitive energy and articulatory training.
 - As Ferdinand predicts, this constraint regularizes acoustic poetics into **low-entropy error-correcting codes** that resist transmission loss.
 
 ---
@@ -134,18 +134,18 @@ To eliminate the memory wall, the pipeline co-designs algorithms directly with h
 ## 6. Part V: Reading the Semantic Phase Space ($\dot{\mathbf{I}}$ vs. $\mathbf{I}$)
 
 The diachronic phase space reveals the universal **Four-Stage Cultural Lifecycle**:
-1. **1980 (Institutional Stigma):** $\mathbf{I} = -0.75, \dot{\mathbf{I}} pprox 0$. Static negative baseline.
+1. **1980 (Institutional Negative Baseline):** $\mathbf{I} = -0.75, \dot{\mathbf{I}} pprox 0$. Static negative baseline.
 2. **1990–2000 (Subcultural Inversion):** Minted in cyphers and foundational albums (*Illmatic*). High acceleration ($\dot{\mathbf{I}} > 0$), peaking at sovereign virtuosity ($\mathbf{I} = +0.88$).
-3. **2010–2020 (Commercial Arbitrage & Semantic Inflation):** Mass media platforms co-opt the token. As Ferdinand's channel capacity models predict, channel broadening destroys mutual information; velocity turns negative ($\dot{\mathbf{I}} < 0$).
-4. **2020+ (Debasement & Re-minting):** The signifier cools back toward neutral noise, prompting originators to mint fresh, uncaptured derivatives (*fire, valid, goated*).
+3. **2010–2020 (Commercial Arbitrage & Semantic Inflation):** Mass media platforms co-opt the token. As Ferdinand's channel capacity models predict, channel broadening sharply attenuates mutual information; velocity turns negative ($\dot{\mathbf{I}} < 0$).
+4. **2020+ (Semantic Dissipation & Re-minting):** The signifier cools back toward neutral noise, prompting originators to mint fresh, uncaptured derivatives (*fire, valid, goated*).
 
 ---
 
 ## 7. Seminar Discussion & Socratic Prompts
 
 1. **Universal Emergent Fabric:** Identify an emergent social fabric outside of the African diaspora (e.g., hacker jargon, crypto-communities, quantum mechanics terminology, or teen slang). How does its internal terminology execute an algebraic inversion $f \mapsto f^{-1}$ or Proof-of-Work to repel outside co-optation?
-2. **Information Entropy & Arbitrage:** Why does corporate adoption inevitably destroy the symbolic utility of an organic vernacular token? Formulate this using Ferdinand's Shannon entropy model and mutual information between originators and mass broadcast channels.
-3. **Algorithmic Erasure in Machine Learning Systems:** When machine learning engineers prune low-frequency vocabulary or truncate context windows to optimize GPU memory, which communities and emergent social fabrics are systematically erased first?
+2. **Information Entropy & Arbitrage:** Why does rapid commercial adoption reduce the mutual information of an organic vernacular token? Formulate this using Ferdinand's Shannon entropy model and mutual information between originators and mass broadcast channels.
+3. **Vocabulary Pruning and Representation in Machine Learning Systems:** When machine learning engineers prune low-frequency vocabulary or truncate context windows to optimize GPU memory, which communities and emergent social fabrics are disproportionately filtered out?
 4. **Phonetic Proof-of-Work in Distributed Systems:** In distributed consensus (e.g., Proof-of-Work in blockchain), nodes burn energy to secure state against Sybil attacks. How does multi-syllabic syncopation in vocal traditions operate as biological Proof-of-Work securing human cultural transmission?
 
 ---
