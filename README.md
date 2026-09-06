@@ -87,7 +87,10 @@ semantic-mechanics/
 │   ├── lecture_02_semantic_inversion.md           # Notes, syllabus & phonetic PoW
 │   ├── lecture_03_formal_translation.pdf          # Monograph 03: Formal Translation (6 pp)
 │   ├── lecture_03_formal_translation.tex          # LaTeX source for Lecture 03
-│   └── lecture_03_formal_translation.md           # Notes, syllabus & computational laboratory
+│   ├── lecture_03_formal_translation.md           # Notes, syllabus & computational laboratory
+│   ├── lecture_04_thermodynamic_semiotics.pdf     # Monograph 04: Thermodynamic Semiotics (6 pp)
+│   ├── lecture_04_thermodynamic_semiotics.tex     # LaTeX source for Lecture 04
+│   └── lecture_04_thermodynamic_semiotics.md      # Notes, syllabus & physics of learning
 ├── models/
 │   ├── lifecycle.py                        # Simulation of token inflation & inversion
 │   └── case_studies.json                   # Structured case studies in math & vernaculars
@@ -124,5 +127,5 @@ The curriculum for *Cultural Mechanics* (Autumn 2026) is published as publicatio
 | **01** | **Representational Genealogy** | *Institutional Economics of Notation* (Leibniz vs. Newton, Chomsky vs. Lambek, compiler ASTs, type systems) | [`lecture_01.pdf`](lectures/lecture_01_representational_genealogy.pdf) | [`lecture_01.md`](lectures/lecture_01_representational_genealogy.md) |
 | **02** | **Semantic Inversion** | *Phonetic Proof-of-Work & Cultural Mechanics* (Algebraic sign flip $f \mapsto f^{-1}$, acoustic dispersion, subcultural arbitrage) | [`lecture_02.pdf`](lectures/lecture_02_semantic_inversion.pdf) | [`lecture_02.md`](lectures/lecture_02_semantic_inversion.md) |
 | **03** | **Formal Translation** | *Computational Geometries & Mathematical Correspondences* (Riemannian manifolds, Fisher metric, hyperbolic trees, Procrustes SVD, optimal transport, Curry-Howard-Lambek) | [`lecture_03.pdf`](lectures/lecture_03_formal_translation.pdf) | [`lecture_03.md`](lectures/lecture_03_formal_translation.md) |
-| **04** | **Thermodynamic Semiotics** *(Forthcoming)* | *The Physics of Sequence Transformation & Typographic Work* (Glyph classification ergonomics, Landauer limits, Kolmogorov complexity, stroke energy) | *Trilogy Part II* | *In Preparation* |
+| **04** | **Thermodynamic Semiotics** | *The Physics of Sequence Transformation & Typographic Work* (Glyph classification ergonomics, Landauer limits, Kolmogorov complexity, stroke curvature energy, Langevin learning) | [`lecture_04.pdf`](lectures/lecture_04_thermodynamic_semiotics.pdf) | [`lecture_04.md`](lectures/lecture_04_thermodynamic_semiotics.md) |
 | **05** | **Cognitive Translation** *(Forthcoming)* | *Multilingual Acquisition, Non-Normative Registers & Cross-Modal Dynamics* (L1/L2 acquisition, polyglot routing, AAC systems, sign/gestural modalities) | *Trilogy Part III* | *In Preparation* |
