@@ -21,7 +21,7 @@
 
 ---
 
-## 1. The Motivating Paradox: Why Standard NLP Fails on Culture
+## 1. The Motivating Paradox
 
 Welcome to *Lecture 02: Semantic Inversion*. Following our investigation in Lecture 01 of **Representational Genealogy**—how formal notations, compilers, and syntactic formalisms are shaped by institutional monopolies and technological transaction costs—we now turn to the living vernacular frontier. Developed under the broader **Semantic Mechanics Project**, this lecture brings together computer systems engineering, computational cognitive science, and sociolinguistics to treat living culture not as an archival museum of static strings, but as an **adaptive, non-equilibrium complex information system**.
 
@@ -39,7 +39,7 @@ ightarrow$ **Residual Error:** $\Delta = |\hat{v} - v^*| = 1.88$
 
 To an automated model matching tokens against static tables, Sentences A and B appear indistinguishable in polarity ($\hat{v} pprox -0.85$ vs. $-0.88$). For Sentence A, this prediction is accurate ($\Delta = 0.00$). But for Sentence B, any competent participant in the African American expressive tradition or global hip-hop culture decodes the **highest order of virtuosic mastery, technical poise, and aesthetic triumph** ($v^* = +1.00$). The model incurs a **maximal polarity inversion error** ($\Delta = 1.88$, a full sign flip).
 
-### 1.1 The Universal Axiom: Why All Culture is Complex Emergent Fabric
+### 1.1 The Universal Axiom
 A foundational axiom of this course is that **all human culture is inherently complex**. Culture is not an ornamental veneer or an arbitrary glossary of slang; it is the **emergent social fabric** woven between distributed human minds navigating resource constraints, institutional surveillance, and coordination games.
 
 While this lecture uses African American Vernacular English (AAVE) and global hip-hop poetics as our primary empirical laboratory—because diaspora communities have historically operated under the most intense socio-political pressures, producing extraordinarily sharp inversion dynamics—the underlying mechanisms govern the emergent social fabric between human beings **everywhere**:
@@ -53,7 +53,7 @@ $$\mathcal{T}: f \mapsto f^{-1}, \quad 	ext{where} \quad 	ext{sign}ig(	ext{Vale
 
 ---
 
-## 2. Part I: Sociolinguistic Mechanics & Symbolic Capital
+## 2. The Sociolinguistic Mechanics of Semantic Inversion
 
 ### Geneva Smitherman: Codification and Internal Fiat
 In *Talkin and Testifyin* (1977) and *Black Talk* (1994), **Dr. Geneva Smitherman** demonstrated that words carrying severe institutional sanctions (*bad*, *ill*, *sick*, *cold*, *nasty*) are systematically inverted into tokens of sovereign distinction:
@@ -73,7 +73,7 @@ In *Characteristics of Negro Expression* (1934), **Zora Neale Hurston** demonstr
 
 ---
 
-## 3. Part II: Information Theory & Cognitive Regularization
+## 3. Information Theory and Cultural Regularization
 
 ### Vanessa Ferdinand's Regularization Thesis
 In iterated learning experiments, **Dr. Vanessa Ferdinand** (*Cognition*, 2019; *CogSci*, 2009) proved that cognitive transmission bottlenecks function as an **inductive regularization filter**:
@@ -88,7 +88,7 @@ When master lyricists (Jean Grae, Rakim, Lauryn Hill, Sa-Roc, MF DOOM) construct
 
 ---
 
-## 4. Part III: The Silicon Bottleneck — Why Python Melts
+## 4. The Silicon Bottleneck
 
 When testing these dynamics across $N pprox 5 	imes 10^7$ tokens (380k songs, 2.6M Urban Dictionary entries):
 1. **The Memory Wall:** Boxed `PyObject` headers expand a 25 GB corpus into **200+ GB of RAM**, crashing standard workstations.
@@ -96,7 +96,7 @@ When testing these dynamics across $N pprox 5 	imes 10^7$ tokens (380k songs, 2
 
 ---
 
-## 5. Part IV: The Tripartite High-Performance Pipeline
+## 5. The Tripartite High-Performance Pipeline
 
 To eliminate the memory wall, the pipeline co-designs algorithms directly with hardware silicon:
 
@@ -131,7 +131,7 @@ To eliminate the memory wall, the pipeline co-designs algorithms directly with h
 
 ---
 
-## 6. Part V: Reading the Semantic Phase Space ($\dot{\mathbf{I}}$ vs. $\mathbf{I}$)
+## 6. Reading the Semantic Phase Space ($\frac{d\mathbf{I}}{dt}$ vs. $\mathbf{I}$)
 
 The diachronic phase space reveals the universal **Four-Stage Cultural Lifecycle**:
 1. **1980 (Institutional Negative Baseline):** $\mathbf{I} = -0.75, \dot{\mathbf{I}} pprox 0$. Static negative baseline.
@@ -150,7 +150,7 @@ The diachronic phase space reveals the universal **Four-Stage Cultural Lifecycle
 
 ---
 
-## 8. Laboratory Exercise: Hands-On in Jupyter
+## 8. Laboratory Exercise
 
 Companion computational notebook:
 [`notebooks/python/06_hpc_cultural_mechanics_pipeline.ipynb`](file:///Users/erickoduniyi/Desktop/mlg/semantic-mechanics/notebooks/python/06_hpc_cultural_mechanics_pipeline.ipynb)

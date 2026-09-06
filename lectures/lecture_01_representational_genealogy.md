@@ -21,7 +21,7 @@
 
 ---
 
-## 1. The Foundational Axiom: Representations Are Economic Technologies
+## 1. The Foundational Axiom
 
 Welcome to the Cultural Mechanics, a short book and class on a part of the larger Semantic Mechanics Project. Across computer science, formal linguistics, and pure mathematics, notation is routinely introduced as an incidental, transparent window onto timeless truth. Students are instructed to memorize differential symbols, syntactic parse trees, matrix brackets, and tensor indices as though they were handed down on stone tablets, wholly independent of the physical, economic, and institutional media in which they were inscribed.
 
@@ -145,7 +145,7 @@ print(f"Loaded {len(df_extinction)} extinction epochs, {len(df_vocab)} authors, 
 
 ## 5. Historical Case Studies in Representational Genealogy
 
-### Case Study 1: The Calculus Wars (1684–1820)
+### 5.1 The Calculus Wars
 - **Newtonian Fluxions ($\dot{x}, \ddot{x}$):** Physical kinematics, dot accents that broke in lead printing type, poor composability for multivariable partials ($\frac{\partial^2 z}{\partial x \partial y}$). Enforced by the British Royal Society.
 - **Leibnizian Differentials ($\frac{dy}{dx}, \int y\,dx$):** Ratio of infinitesimal differences, effortlessly set in movable type, algebraic fraction cancellation in the chain rule:
 
@@ -153,7 +153,7 @@ $$\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}$$
 
 - **The Cambridge Analytical Society (1812):** Founded by Babbage, Herschel, and Peacock to promote *"the principles of pure d-ism in opposition to the dot-age of the university."*
 
-### Case Study 2: Syntactic Architecture (1955–2025)
+### 5.2 Syntactic Architecture
 - **Chomskyan Phrase Structure Trees ($S \to NP \ VP$):** Heavily funded by Cold War DARPA/military machine-translation grants at MIT RLE; perfectly aligned with von Neumann pushdown stack automata and compiler architectures (BNF in Algol 60).
 - **Lambek Pregroups ($s \cdot n^l$):** Categorical monoidal reductions with left/right adjoints; lacked silicon alignment in the 1960s, creating path-dependent syntactic lock-in for half a century until quantum NLP (DisCoCat).
 
@@ -161,7 +161,7 @@ $$\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}$$
 
 ## 6. Pedagogical Roadmap and Laboratory Assignments
 
-### Laboratory Assignment 01 (Deliverable in Notebook 01)
+### 6.1 Laboratory Assignment 01
 Students will execute [`notebooks/python/01_notational_economics_diffusion.ipynb`](file:///Users/erickoduniyi/Desktop/mlg/semantic-mechanics/notebooks/python/01_notational_economics_diffusion.ipynb) (or parallel R implementation):
 1. **Corpus Ingestion and Trajectory Mapping:** Ingest `data/corpus/notational_extinction.csv` and plot empirical diffusion $F(t)$.
 2. **Bass Diffusion Modeling:** Fit the differential equation:
@@ -174,7 +174,7 @@ $$\frac{dF(t)}{dt} = (p + q F(t))(1 - F(t))$$
 - **Lecture 01 (This Monograph):** *Representational Genealogy, Computational Environments, and the Politics of Notation*.
 - **Lecture 02 (Companion Monograph):** *Semantic Inversion: Phonetic Proof-of-Work and High-Performance Cultural Mechanics*.
 
-### 6.2 The Bridge to Lecture 02: From Institutional Lock-In to Vernacular Inversion
+### 6.2 The Bridge to Lecture 02
 In this lecture, we have seen how institutional hierarchies enforce representational lock-in through political monopolies and capital subsidies. But what happens when human beings are systematically locked out of institutional capital?
 
 In **Lecture 02: Semantic Inversion**, we turn from the static archives of European academies to the living, hyper-dynamic frontier of vernacular innovation. We will examine how African American Vernacular English and global hip-hop poetics construct an entirely autonomous economic order—minting semantic inverses ($f \mapsto f^{-1}$), embedding phonetic Proof-of-Work, and defending cultural capital against corporate arbitrage.

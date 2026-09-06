@@ -110,7 +110,7 @@
 \vspace{0.1em}
 \hrule height 1.2pt \vspace{0.7em}
 
-\section{The Motivating Paradox: Why Does Standard NLP Fail on Culture?}
+\section{The Motivating Paradox}
 
 Welcome to \textit{Lecture 02: Semantic Inversion}. Following our investigation in Lecture 01 of \textbf{Representational Genealogy}---how formal notations, compilers, and syntactic formalisms are shaped by institutional monopolies and technological transaction costs---we now turn to the living vernacular frontier. Developed under the broader \textbf{Semantic Mechanics Project}, this lecture brings together computer systems engineering, computational cognitive science, and sociolinguistics to treat living culture not as an archival museum of static strings, but as an \textbf{adaptive, non-equilibrium complex information system}.
 
@@ -132,7 +132,7 @@ This divergence is not a dataset labeling anomaly or a fine-tuning glitch; it po
     \mathcal{T}: f \mapsto f^{-1}, \quad \text{where} \quad \text{sign}\big(\text{Valence}(w_{\text{vernacular}})\big) = -\,\text{sign}\big(\text{Valence}(w_{\text{institutional}})\big)
 \end{equation}
 
-\subsection{The Universal Axiom: Why All Culture is Complex Emergent Fabric}
+\subsection{The Universal Axiom}
 A foundational axiom of this course is that \textbf{all human culture is inherently complex}. Culture is not an ornamental veneer or an arbitrary glossary of slang words; it is the \textbf{emergent social fabric} woven between distributed human minds navigating resource constraints, institutional surveillance, and coordination games.
 
 While this lecture uses African American Vernacular English (AAVE) and global hip-hop poetics as our primary empirical laboratory---because diaspora communities have historically operated under the most intense socio-political pressures, producing extraordinarily sharp inversion dynamics---the underlying mechanisms govern the emergent social fabric between human beings \textbf{everywhere}:
@@ -144,7 +144,7 @@ While this lecture uses African American Vernacular English (AAVE) and global hi
 \end{itemize}
 In every collective, living language is an active defense against cheap mimicry. If language were static, outsider entities (advertisers, institutions, adversaries) could co-opt signals with zero energy expenditure. To preserve cohesion, communities continuously evolve non-linear transformations.
 
-\section{Part I: The Sociolinguistic Mechanics of Semantic Inversion}
+\section{The Sociolinguistic Mechanics of Semantic Inversion}
 
 \subsection{Geneva Smitherman and the Defense of Symbolic Capital}
 In her foundational works \textit{Talkin and Testifyin: The Language of Black America} (1977) and \textit{Black Talk} (1994), sociolinguist \textbf{Dr.~Geneva Smitherman} formulated the definitive taxonomy of AAVE. Smitherman demonstrated that signifiers assigned negative normative valence in formal institutional registers---\textit{bad}, \textit{ill/sick}, \textit{cold/nasty}---are systematically inverted in the vernacular into markers of sovereign technical and aesthetic distinction.
@@ -173,7 +173,7 @@ As anthropologist and folklorist \textbf{Zora Neale Hurston} revealed in \textit
 \label{tab:nlp_comparison}
 \end{table}
 
-\section{Part II: Information Theory and Cultural Regularization}
+\section{Information Theory and Cultural Regularization}
 
 How do inverted signifiers survive noisy transmission across generations without degenerating into random slang?
 
@@ -189,7 +189,7 @@ In \textit{Black Noise: Rap Music and Black Culture in Contemporary America} (19
 
 In the language of complexity science and distributed computing, this acoustic virtuosity functions as \textbf{Phonetic Proof-of-Work (PoW)}. An impostor cannot counterfeit a multi-rhyme cadence across four bars of 16th notes; it requires verifiable cognitive energy and articulatory training. As Ferdinand's regularization thesis predicts, this stringent acoustic constraint protects the cultural transmission channel from low-effort noise and commercial dilution.
 
-\section{Part III: The Silicon Bottleneck---Why Python Melts on Culture}
+\section{The Silicon Bottleneck}
 
 To validate these theories empirically, we must analyze longitudinal cultural corpora at planetary scale: 380,000 transcribed vocal performances, 2.6 million Urban Dictionary submissions, and 40 years of text ($N \approx 5 \times 10^7$ tokens with $D = 768$-dimensional dense vectors).
 
@@ -199,7 +199,7 @@ In standard interpreted Python, all primitives are boxed in heavy \texttt{PyObje
 \subsection{Combinatorial String Traversal}
 Detecting multi-syllabic phonetic rhymes using standard dictionary loops scales as $\mathcal{O}(N \cdot L^2)$. For $N = 5 \times 10^5$ lyric lines, this requires over $10^{10}$ string traversals, requiring dozens of hours in native Python loops.
 
-\section{Part IV: The Tripartite High-Performance Pipeline}
+\section{The Tripartite High-Performance Pipeline}
 
 To capture cultural dynamics at scale without supercomputer access, we co-design our algorithms directly with modern microprocessor architecture:
 
@@ -210,7 +210,7 @@ To capture cultural dynamics at scale without supercomputer access, we co-design
 \label{fig:pipeline}
 \end{figure*}
 
-\subsection{Module A: Columnar Storage \& Zero-Copy Streaming}
+\subsection{Columnar Storage \& Zero-Copy Streaming}
 We serialize text in Apache Arrow columnar format and access partitions via POSIX memory mapping:
 \begin{equation}
     \mathcal{M} = \text{mmap}(\text{FileDescriptor}, \text{Length}, \text{PROT\_READ}, \text{MAP\_SHARED})
@@ -225,7 +225,7 @@ rel = con.read_parquet("cultural_corpus_1980_2025.parquet")
 inversion_slice = rel.filter("epoch >= 1990 AND valence > 0.0").arrow()
 \end{lstlisting}
 
-\subsection{Module B: SIMD 64-Bit Phonetic Bitmasking}
+\subsection{SIMD 64-Bit Phonetic Bitmasking}
 We map each syllable $\sigma$ directly into an unsigned 64-bit integer register:
 \begin{equation}
     \mathbf{b}_\sigma = \Big[ \underbrace{s_1 s_0}_{\text{Stress (2b)}} \;\Big|\; \underbrace{v_5 \dots v_0}_{\text{Vowel Class (6b)}} \;\Big|\; \underbrace{h_2 h_1 h_0}_{\text{Height (3b)}} \;\Big|\; \underbrace{b_1 b_0}_{\text{Backness (2b)}} \;\Big|\; \underbrace{c_7 \dots c_0}_{\text{Onset (8b)}} \;\Big|\; \underbrace{k_7 \dots k_0}_{\text{Coda (8b)}} \;\Big|\; \mathbf{0}_{35} \Big]
@@ -243,14 +243,14 @@ static inline int is_rhyme_simd(uint64_t b_i, uint64_t b_j, uint64_t mask) {
 }
 \end{lstlisting}
 
-\subsection{Module C: Level-3 BLAS Tensor Projections}
+\subsection{Level-3 BLAS Tensor Projections}
 We project token embeddings $\mathbf{X} \in \mathbb{R}^{N \times D}$ against orthogonal poles $\mathbf{C} = [\mathbf{c}_{\text{path}}, \mathbf{c}_{\text{virt}}]^T \in \mathbb{R}^{2 \times D}$ via a single GEMM call:
 \begin{equation}
     \mathbf{S} = \mathbf{X} \mathbf{C}^T \in \mathbb{R}^{N \times 2}, \quad \mathbf{I} = \frac{S_{\ast, 1} - S_{\ast, 0}}{|S_{\ast, 1}| + |S_{\ast, 0}| + \epsilon} \in [-1, +1]
 \end{equation}
 Evaluating 100,000 tokens on GPU Tensor Cores executes in \textbf{$< 4.2\text{ ms}$}.
 
-\section{Part V: Reading the Semantic Phase Space (\texorpdfstring{$\dot{\mathbf{I}}$}{dI/dt} vs. \texorpdfstring{$\mathbf{I}$}{I})}
+\section{Reading the Semantic Phase Space (\texorpdfstring{$\frac{d\mathbf{I}}{dt}$}{dI/dt} vs. \texorpdfstring{$\mathbf{I}$}{I})}
 
 \begin{figure}[htbp]
 \centering
@@ -278,7 +278,7 @@ Figure~\ref{fig:phase_space} visualizes the resulting dynamical system. Observe 
 \end{enumerate}
 }
 
-\section{Laboratory Exercise: Hands-On in Jupyter}
+\section{Laboratory Exercise}
 For this week's laboratory assignment, clone and execute the companion computational notebook:
 \begin{center}
     \texttt{notebooks/python/06\_hpc\_cultural\_mechanics\_pipeline.ipynb}
