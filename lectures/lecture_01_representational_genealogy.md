@@ -1,4 +1,4 @@
-# Representational Genealogy: Lecture 01
+# Cultural Mechanics: Lecture 01
 **SEMANTIC MECHANICS PROJECT · MATHEMATICAL LINGUISTICS GROUP**
 
 ---

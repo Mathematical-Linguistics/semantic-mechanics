@@ -1,4 +1,4 @@
-# Semantic Inversion: Lecture 02
+# Cultural Mechanics: Lecture 02
 **SEMANTIC MECHANICS PROJECT · MATHEMATICAL LINGUISTICS GROUP**
 
 ---
