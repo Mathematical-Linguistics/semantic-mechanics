@@ -64,11 +64,11 @@ $$g_p: T_p\mathcal{M} \times T_p\mathcal{M} \longrightarrow \mathbb{R}$$
 
 The distance between two concepts $p, q \in \mathcal{M}$ is defined by the **geodesic distance**—the infimum of path lengths along the manifold:
 
-$$d_g(p, q) = \inf_{\gamma} \int_0^1 \sqrt{g_{\gamma(t)}\big(\dot{\gamma}(t), \dot{\gamma}(t)\big)} \, dt, \quad \gamma(0) = p, \; \gamma(1) = q$$
+$$d_g(p, q) = \inf_{\gamma} \int_0^1 \sqrt{g_{\gamma(t)}\left(\frac{d\gamma}{dt}, \frac{d\gamma}{dt}\right)} \, dt, \quad \gamma(0) = p, \; \gamma(1) = q$$
 
 where geodesic trajectories satisfy the Euler-Lagrange equations governed by the Levi-Civita connection $\nabla$:
 
-$$\ddot{\gamma}^k + \Gamma_{ij}^k \dot{\gamma}^i \dot{\gamma}^j = 0, \quad \text{with Christoffel symbols } \Gamma_{ij}^k = \frac{1}{2} g^{kl} \left( \frac{\partial g_{il}}{\partial x^j} + \frac{\partial g_{jl}}{\partial x^i} - \frac{\partial g_{ij}}{\partial x^l} \right)$$
+$$\frac{d^2 \gamma^k}{dt^2} + \Gamma_{ij}^k \frac{d\gamma^i}{dt} \frac{d\gamma^j}{dt} = 0, \quad \text{with Christoffel symbols } \Gamma_{ij}^k = \frac{1}{2} g^{kl} \left( \frac{\partial g_{il}}{\partial x^j} + \frac{\partial g_{jl}}{\partial x^i} - \frac{\partial g_{ij}}{\partial x^l} \right)$$
 
 ### 2.2 Information Geometry and the Fisher Metric
 When a computational model represents semantic tokens through conditional probability distributions $p_\theta(y \mid x)$, the parameter space forms a statistical manifold equipped with the **Fisher Information Metric** (Amari, 2016):
