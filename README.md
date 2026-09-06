@@ -55,21 +55,6 @@ The project provides complete parallel suites of executable Jupyter notebooks in
 
 ---
 
-## Representational Case Studies
-
-### 1. Leibniz vs. Newton (Calculus Notations)
-Newtonian fluxions ($\dot{x}, \ddot{x}$) were tied to kinematic geometry, requiring the reader to already grasp the physical trajectory. Leibniz designed his differential notation ($\frac{dy}{dx}, \int y\,dx$) as an algebraic ledger. European continental mathematics outpaced British mathematics for over a century because Leibniz's notation lowered the cognitive barrier to entry and was economically optimized for movable type printing foundries.
-
-### 2. Chomsky Trees vs. Lambek Pregroups (Linguistic Syntax)
-Chomskyan phrase structure trees dominated post-war linguistics because they directly matched early von Neumann pushdown automata and were heavily funded by Cold War DARPA/military machine-translation grants. Joachim Lambek's pregroup grammars and categorical calculus, despite their mathematical elegance, lacked hardware-era alignment and institutional subsidies.
-
-### 3. Vernacular Polarity Inversion (Hip-Hop & AAVE)
-In African American Vernacular English and rap poetics, artists systematically invert the algebraic sign of words:
-$$\text{Valuation}: \quad \mathcal{V}(w) = -\mathcal{V}_{\text{inst}}(w)$$
-Taking carceral, pathological, or debasing words ("bad", "ill", "cold") and inverting them into highest artistic praise operates as a cryptographic defense: an outsider hears pathology; an insider recognizes virtuosity.
-
----
-
 ## Quickstart
 
 ### Running the Python Simulation

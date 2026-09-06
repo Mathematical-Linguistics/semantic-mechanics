@@ -23,7 +23,7 @@
 
 ## 1. The Foundational Axiom: Representations Are Economic Technologies
 
-Welcome to the opening lecture of the **Semantic Mechanics Project**. Across computer science, formal linguistics, and pure mathematics, notation is routinely introduced as an incidental, transparent window onto timeless truth. Students are instructed to memorize differential symbols, syntactic parse trees, matrix brackets, and tensor indices as though they were handed down on stone tablets, wholly independent of the physical, economic, and institutional media in which they were inscribed.
+Welcome to the Cultural Mechanics, a short book and class on a part of the larger Semantic Mechanics Project. Across computer science, formal linguistics, and pure mathematics, notation is routinely introduced as an incidental, transparent window onto timeless truth. Students are instructed to memorize differential symbols, syntactic parse trees, matrix brackets, and tensor indices as though they were handed down on stone tablets, wholly independent of the physical, economic, and institutional media in which they were inscribed.
 
 This pedagogical myth obscures the central reality of symbolic thought: **notations are economic technologies**. They are cognitive compression algorithms engineered under severe physical constraints:
 1. **Printing and Mechanical Ergonomics:** The physical friction of typefounding, ink smudging, lead casting, keyboard layouts, and screen rendering.
