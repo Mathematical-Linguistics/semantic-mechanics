@@ -17,7 +17,7 @@
   - Lambek, Joachim (1958). "The mathematics of sentence structure." *The American Mathematical Monthly*.
   - Shannon, Claude E. (1948). "A mathematical theory of communication." *Bell System Technical Journal*.
 - **Compiled Lecture Monograph PDF:** [`lecture_01_representational_genealogy.pdf`](file:///Users/erickoduniyi/Desktop/mlg/semantic-mechanics/lectures/lecture_01_representational_genealogy.pdf)
-- **Companion Monograph:** [`lecture_02_cultural_mechanics.pdf`](file:///Users/erickoduniyi/Desktop/mlg/semantic-mechanics/lectures/lecture_02_cultural_mechanics.pdf)
+- **Companion Monograph:** [`lecture_02_semantic_inversion.pdf`](file:///Users/erickoduniyi/Desktop/mlg/semantic-mechanics/lectures/lecture_02_semantic_inversion.pdf)
 
 ---
 
@@ -172,7 +172,13 @@ $$\frac{dF(t)}{dt} = (p + q F(t))(1 - F(t))$$
 
 ### Core Curriculum Structure: The Two Monograph Arc
 - **Lecture 01 (This Monograph):** *Representational Genealogy, Computational Environments, and the Politics of Notation*.
-- **Lecture 02 (Companion Monograph):** *Cultural Mechanics: Semantic Inversion, Phonetic Proof-of-Work, and High-Performance Cultural Mechanics*.
+- **Lecture 02 (Companion Monograph):** *Semantic Inversion: Phonetic Proof-of-Work and High-Performance Cultural Mechanics*.
+
+### 6.2 The Bridge to Lecture 02: From Institutional Lock-In to Vernacular Inversion
+In this lecture, we have seen how institutional hierarchies enforce representational lock-in through political monopolies and capital subsidies. But what happens when human beings are systematically locked out of institutional capital?
+
+In **Lecture 02: Semantic Inversion**, we turn from the static archives of European academies to the living, hyper-dynamic frontier of vernacular innovation. We will examine how African American Vernacular English and global hip-hop poetics construct an entirely autonomous economic order—minting semantic inverses ($f \mapsto f^{-1}$), embedding phonetic Proof-of-Work, and defending cultural capital against corporate arbitrage.
+
 
 ---
 

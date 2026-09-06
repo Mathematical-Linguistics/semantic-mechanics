@@ -97,9 +97,9 @@ semantic-mechanics/
 │   ├── lecture_01_representational_genealogy.pdf  # Monograph 01: Politics of Notation (6 pp)
 │   ├── lecture_01_representational_genealogy.tex  # LaTeX source for Lecture 01
 │   ├── lecture_01_representational_genealogy.md   # Notes, syllabus & environment setup
-│   ├── lecture_02_cultural_mechanics.pdf          # Monograph 02: Cultural Mechanics (6 pp)
-│   ├── lecture_02_cultural_mechanics.tex          # LaTeX source for Lecture 02
-│   └── lecture_02_cultural_mechanics.md           # Notes, syllabus & phonetic PoW
+│   ├── lecture_02_semantic_inversion.pdf          # Monograph 02: Semantic Inversion (6 pp)
+│   ├── lecture_02_semantic_inversion.tex          # LaTeX source for Lecture 02
+│   └── lecture_02_semantic_inversion.md           # Notes, syllabus & phonetic PoW
 ├── models/
 │   ├── lifecycle.py                        # Simulation of token inflation & inversion
 │   └── case_studies.json                   # Structured case studies in math & vernaculars

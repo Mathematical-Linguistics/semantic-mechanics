@@ -16,14 +16,14 @@
   - Ferdinand, Vanessa, Kirby, Simon, & Smith, Kenny (2019). "The cognitive roots of regularization in language." *Cognition*.
   - Hurston, Zora Neale (1934). "Characteristics of Negro Expression."
   - Bourdieu, Pierre (1991). *Language and Symbolic Power*.
-- **Compiled Lecture Monograph PDF:** [`lecture_02_cultural_mechanics.pdf`](file:///Users/erickoduniyi/Desktop/mlg/semantic-mechanics/lectures/lecture_02_cultural_mechanics.pdf)
+- **Compiled Lecture Monograph PDF:** [`lecture_02_semantic_inversion.pdf`](file:///Users/erickoduniyi/Desktop/mlg/semantic-mechanics/lectures/lecture_02_semantic_inversion.pdf)
 - **Companion Monograph:** [`lecture_01_representational_genealogy.pdf`](file:///Users/erickoduniyi/Desktop/mlg/semantic-mechanics/lectures/lecture_01_representational_genealogy.pdf)
 
 ---
 
 ## 1. The Motivating Paradox: Why Standard NLP Fails on Culture
 
-Welcome to *Lecture 02: Cultural Mechanics*. Following our investigation in Lecture 01 of **Representational Genealogy**—how formal notations, compilers, and syntactic formalisms are shaped by institutional monopolies and technological transaction costs—we now turn to the living vernacular frontier. Developed under the broader **Semantic Mechanics Project**, this lecture brings together computer systems engineering, computational cognitive science, and sociolinguistics to treat living culture not as an archival museum of static strings, but as an **adaptive, non-equilibrium complex information system**.
+Welcome to *Lecture 02: Semantic Inversion*. Following our investigation in Lecture 01 of **Representational Genealogy**—how formal notations, compilers, and syntactic formalisms are shaped by institutional monopolies and technological transaction costs—we now turn to the living vernacular frontier. Developed under the broader **Semantic Mechanics Project**, this lecture brings together computer systems engineering, computational cognitive science, and sociolinguistics to treat living culture not as an archival museum of static strings, but as an **adaptive, non-equilibrium complex information system**.
 
 Modern NLP and large language models (LLMs) operate on static semantic tables. When exposed to living vernacular culture, they suffer a fundamental epistemic breakdown:
 
