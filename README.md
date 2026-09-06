@@ -90,7 +90,10 @@ semantic-mechanics/
 │   ├── lecture_03_formal_translation.md           # Notes, syllabus & computational laboratory
 │   ├── lecture_04_thermodynamic_semiotics.pdf     # Monograph 04: Thermodynamic Semiotics (6 pp)
 │   ├── lecture_04_thermodynamic_semiotics.tex     # LaTeX source for Lecture 04
-│   └── lecture_04_thermodynamic_semiotics.md      # Notes, syllabus & physics of learning
+│   ├── lecture_04_thermodynamic_semiotics.md      # Notes, syllabus & physics of learning
+│   ├── lecture_05_cognitive_translation.pdf       # Monograph 05: Cognitive Translation (6 pp)
+│   ├── lecture_05_cognitive_translation.tex       # LaTeX source for Lecture 05
+│   └── lecture_05_cognitive_translation.md        # Notes, syllabus & cognitive dynamics
 ├── models/
 │   ├── lifecycle.py                        # Simulation of token inflation & inversion
 │   └── case_studies.json                   # Structured case studies in math & vernaculars
@@ -128,4 +131,4 @@ The curriculum for *Cultural Mechanics* (Autumn 2026) is published as publicatio
 | **02** | **Semantic Inversion** | *Phonetic Proof-of-Work & Cultural Mechanics* (Algebraic sign flip $f \mapsto f^{-1}$, acoustic dispersion, subcultural arbitrage) | [`lecture_02.pdf`](lectures/lecture_02_semantic_inversion.pdf) | [`lecture_02.md`](lectures/lecture_02_semantic_inversion.md) |
 | **03** | **Formal Translation** | *Computational Geometries & Mathematical Correspondences* (Riemannian manifolds, Fisher metric, hyperbolic trees, Procrustes SVD, optimal transport, Curry-Howard-Lambek) | [`lecture_03.pdf`](lectures/lecture_03_formal_translation.pdf) | [`lecture_03.md`](lectures/lecture_03_formal_translation.md) |
 | **04** | **Thermodynamic Semiotics** | *The Physics of Sequence Transformation & Typographic Work* (Glyph classification ergonomics, Landauer limits, Kolmogorov complexity, stroke curvature energy, Langevin learning) | [`lecture_04.pdf`](lectures/lecture_04_thermodynamic_semiotics.pdf) | [`lecture_04.md`](lectures/lecture_04_thermodynamic_semiotics.md) |
-| **05** | **Cognitive Translation** *(Forthcoming)* | *Multilingual Acquisition, Non-Normative Registers & Cross-Modal Dynamics* (L1/L2 acquisition, polyglot routing, AAC systems, sign/gestural modalities) | *Trilogy Part III* | *In Preparation* |
+| **05** | **Cognitive Translation** | *Neurobiological Manifolds, Modality Projection & Channel Thermodynamics* (Attractor dynamics, Kramers escape rate, AAC rate-distortion, 4D fiber bundles, Shannon channel bounds) | [`lecture_05.pdf`](lectures/lecture_05_cognitive_translation.pdf) | [`lecture_05.md`](lectures/lecture_05_cognitive_translation.md) |
