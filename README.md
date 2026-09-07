@@ -52,6 +52,8 @@ The project provides complete parallel suites of executable Jupyter notebooks in
 | **04** | **Pragmatic Density** | [`04_python`](notebooks/python/04_pragmatic_density_and_signifying.ipynb) | [`04_r`](notebooks/r/04_pragmatic_density_and_signifying.ipynb) | Double-voiced discourse, multisyllabic rhyme density (MSRD), and cryptographic resistance. |
 | **05** | **Visual Empirical Studies** | [`05_python`](notebooks/python/05_linguistic_hypotheses_visual_studies.ipynb) | [`05_r`](notebooks/r/05_linguistic_hypotheses_visual_studies.ipynb) | Empirical tests for notational extinction, vocabulary horizons, and vernacular shields. |
 | **06** | **HPC Cultural Mechanics** | [`06_python`](notebooks/python/06_hpc_cultural_mechanics_pipeline.ipynb) | — | Streaming zero-copy HPC pipeline for corpus phonetics and dynamic phase portraits. |
+| **07** | **Cross-Lingual Translation** | [`07_python`](notebooks/python/07_cross_lingual_manifold_translation.ipynb) | — | Orthogonal Procrustes SVD, entropic optimal transport (Sinkhorn), and Poincaré disk syntax trees. |
+| **08** | **Thermodynamic Semiotics** | [`08_python`](notebooks/python/08_thermodynamic_semiotics.ipynb) | — | TrueType stroke curvature energy, typographic Pareto frontier, Landauer limits, and Langevin diffusion. |
 
 ---
 
@@ -98,13 +100,15 @@ semantic-mechanics/
 │   ├── lifecycle.py                        # Simulation of token inflation & inversion
 │   └── case_studies.json                   # Structured case studies in math & vernaculars
 ├── notebooks/
-│   ├── python/                             # Python 3 Jupyter Suite (01–06)
+│   ├── python/                             # Python 3 Jupyter Suite (01–08)
 │   │   ├── 01_notational_economics_diffusion.ipynb
 │   │   ├── 02_semantic_inversion_embeddings.ipynb
 │   │   ├── 03_cultural_arbitrage_and_debasement.ipynb
 │   │   ├── 04_pragmatic_density_and_signifying.ipynb
 │   │   ├── 05_linguistic_hypotheses_visual_studies.ipynb
-│   │   └── 06_hpc_cultural_mechanics_pipeline.ipynb
+│   │   ├── 06_hpc_cultural_mechanics_pipeline.ipynb
+│   │   ├── 07_cross_lingual_manifold_translation.ipynb
+│   │   └── 08_thermodynamic_semiotics.ipynb
 │   └── r/                                  # R (IRkernel / ggplot2) Suite (01–05)
 │       ├── 01_notational_economics_diffusion.ipynb
 │       ├── 02_semantic_inversion_embeddings.ipynb
