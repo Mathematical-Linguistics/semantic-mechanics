@@ -54,6 +54,8 @@ The project provides complete parallel suites of executable Jupyter notebooks in
 | **06** | **HPC Cultural Mechanics** | [`06_python`](notebooks/python/06_hpc_cultural_mechanics_pipeline.ipynb) | — | Streaming zero-copy HPC pipeline for corpus phonetics and dynamic phase portraits. |
 | **07** | **Cross-Lingual Translation** | [`07_python`](notebooks/python/07_cross_lingual_manifold_translation.ipynb) | — | Orthogonal Procrustes SVD, entropic optimal transport (Sinkhorn), and Poincaré disk syntax trees. |
 | **08** | **Thermodynamic Semiotics** | [`08_python`](notebooks/python/08_thermodynamic_semiotics.ipynb) | — | TrueType stroke curvature energy, typographic Pareto frontier, Landauer limits, and Langevin diffusion. |
+| **09** | **Cognitive Translation** | [`09_python`](notebooks/python/09_cognitive_translation.ipynb) | — | Cognitive channel constraints, AAC, cross-modal translation, and semantic drift. |
+| **10** | **Greed, Toxicity, and Repair** | [`10_python`](notebooks/python/10_greed_toxicity_and_repair.ipynb) | — | Zero-sum and positive-sum language, TF–IDF exploration, and a voice-message safety-cue audit. |
 
 ---
 
@@ -95,12 +97,15 @@ semantic-mechanics/
 │   ├── lecture_04_thermodynamic_semiotics.md      # Notes, syllabus & physics of learning
 │   ├── lecture_05_cognitive_translation.pdf       # Monograph 05: Cognitive Translation (6 pp)
 │   ├── lecture_05_cognitive_translation.tex       # LaTeX source for Lecture 05
-│   └── lecture_05_cognitive_translation.md        # Notes, syllabus & cognitive dynamics
+│   ├── lecture_05_cognitive_translation.md        # Notes, syllabus & cognitive dynamics
+│   ├── lecture_06_greed_toxicity_and_repair.pdf   # Lecture 06: Greed, Toxicity, and Repair
+│   ├── lecture_06_greed_toxicity_and_repair.tex   # LaTeX source for Lecture 06
+│   └── lecture_06_greed_toxicity_and_repair.md    # Lecture notes & computational laboratory
 ├── models/
 │   ├── lifecycle.py                        # Simulation of token inflation & inversion
 │   └── case_studies.json                   # Structured case studies in math & vernaculars
 ├── notebooks/
-│   ├── python/                             # Python 3 Jupyter Suite (01–08)
+│   ├── python/                             # Python 3 Jupyter Suite (01–10)
 │   │   ├── 01_notational_economics_diffusion.ipynb
 │   │   ├── 02_semantic_inversion_embeddings.ipynb
 │   │   ├── 03_cultural_arbitrage_and_debasement.ipynb
@@ -108,7 +113,9 @@ semantic-mechanics/
 │   │   ├── 05_linguistic_hypotheses_visual_studies.ipynb
 │   │   ├── 06_hpc_cultural_mechanics_pipeline.ipynb
 │   │   ├── 07_cross_lingual_manifold_translation.ipynb
-│   │   └── 08_thermodynamic_semiotics.ipynb
+│   │   ├── 08_thermodynamic_semiotics.ipynb
+│   │   ├── 09_cognitive_translation.ipynb
+│   │   └── 10_greed_toxicity_and_repair.ipynb
 │   └── r/                                  # R (IRkernel / ggplot2) Suite (01–05)
 │       ├── 01_notational_economics_diffusion.ipynb
 │       ├── 02_semantic_inversion_embeddings.ipynb
@@ -127,7 +134,7 @@ semantic-mechanics/
 
 ## Cultural Mechanics: Lecture Monograph Series
 
-The curriculum for *Cultural Mechanics* (Autumn 2026) is published as publication-grade 6-page monographs compiled in LaTeX:
+The curriculum for *Cultural Mechanics* (Autumn 2026) is published as lecture monographs and extended teaching documents compiled in LaTeX:
 
 | Lecture | Title | Focus & Core Mathematics | Monograph PDF | Notes & Syllabus |
 |:---:|---|---|:---:|:---:|
@@ -136,3 +143,4 @@ The curriculum for *Cultural Mechanics* (Autumn 2026) is published as publicatio
 | **03** | **Formal Translation** | *Computational Geometries & Mathematical Correspondences* (Riemannian manifolds, Fisher metric, hyperbolic trees, Procrustes SVD, optimal transport, Curry-Howard-Lambek) | [`lecture_03.pdf`](lectures/lecture_03_formal_translation.pdf) | [`lecture_03.md`](lectures/lecture_03_formal_translation.md) |
 | **04** | **Thermodynamic Semiotics** | *The Physics of Sequence Transformation & Typographic Work* (Glyph classification ergonomics, Landauer limits, Kolmogorov complexity, stroke curvature energy, Langevin learning) | [`lecture_04.pdf`](lectures/lecture_04_thermodynamic_semiotics.pdf) | [`lecture_04.md`](lectures/lecture_04_thermodynamic_semiotics.md) |
 | **05** | **Cognitive Translation** | *Neurobiological Manifolds, Modality Projection & Channel Thermodynamics* (Attractor dynamics, Kramers escape rate, AAC rate-distortion, 4D fiber bundles, Shannon channel bounds) | [`lecture_05.pdf`](lectures/lecture_05_cognitive_translation.pdf) | [`lecture_05.md`](lectures/lecture_05_cognitive_translation.md) |
+| **06** | **Greed, Toxicity, and Repair** | *Listening, Grief, Resource Defense, and the Political Economy of Harm* (zero-sum and positive-sum framing, voice doppelgängers, epidemiology, behavioral economics, reparations, and UBI) | [`lecture_06.pdf`](lectures/lecture_06_greed_toxicity_and_repair.pdf) | [`lecture_06.md`](lectures/lecture_06_greed_toxicity_and_repair.md) |
