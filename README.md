@@ -55,7 +55,7 @@ The project provides complete parallel suites of executable Jupyter notebooks in
 | **07** | **Cross-Lingual Translation** | [`07_python`](notebooks/python/07_cross_lingual_manifold_translation.ipynb) | — | Orthogonal Procrustes SVD, entropic optimal transport (Sinkhorn), and Poincaré disk syntax trees. |
 | **08** | **Thermodynamic Semiotics** | [`08_python`](notebooks/python/08_thermodynamic_semiotics.ipynb) | — | TrueType stroke curvature energy, typographic Pareto frontier, Landauer limits, and Langevin diffusion. |
 | **09** | **Cognitive Translation** | [`09_python`](notebooks/python/09_cognitive_translation.ipynb) | — | Cognitive channel constraints, AAC, cross-modal translation, and semantic drift. |
-| **10** | **Greed, Toxicity, and Repair** | [`10_python`](notebooks/python/10_greed_toxicity_and_repair.ipynb) | — | Zero-sum and positive-sum language, TF–IDF exploration, and a voice-message safety-cue audit. |
+| **10** | **Greed, Toxicity, and Repair** | [`10_python`](notebooks/python/10_greed_toxicity_and_repair.ipynb) | [`10_r`](notebooks/r/10_greed_toxicity_and_repair.ipynb) | Synthetic resource-frame text analysis, TF–IDF visualizations, and a voice-message safety-cue audit. |
 
 ---
 
@@ -116,12 +116,13 @@ semantic-mechanics/
 │   │   ├── 08_thermodynamic_semiotics.ipynb
 │   │   ├── 09_cognitive_translation.ipynb
 │   │   └── 10_greed_toxicity_and_repair.ipynb
-│   └── r/                                  # R (IRkernel / ggplot2) Suite (01–05)
+│   └── r/                                  # R (IRkernel / ggplot2) Suite (01–05, 10)
 │       ├── 01_notational_economics_diffusion.ipynb
 │       ├── 02_semantic_inversion_embeddings.ipynb
 │       ├── 03_cultural_arbitrage_and_debasement.ipynb
 │       ├── 04_pragmatic_density_and_signifying.ipynb
-│       └── 05_linguistic_hypotheses_visual_studies.ipynb
+│       ├── 05_linguistic_hypotheses_visual_studies.ipynb
+│       └── 10_greed_toxicity_and_repair.ipynb
 ├── data/
 │   └── corpus/                             # Empirical Linguistic & Cultural Datasets
 │       ├── notational_extinction.csv
